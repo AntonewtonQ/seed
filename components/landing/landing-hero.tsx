@@ -4,6 +4,7 @@ import { ArrowRight, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { seedBrand } from "@/lib/brand"
 
+import { HeroMotionLines } from "./hero-motion-lines"
 import { heroStats } from "./landing-data"
 
 export function LandingHero() {
@@ -13,16 +14,17 @@ export function LandingHero() {
       id="inicio"
     >
       <Image
-        alt="Identidade visual da plataforma SEED"
-        className="absolute inset-0 -z-20 size-full object-cover opacity-[0.28]"
+        alt="Visual abstrato de pipeline de investimento, data room e due diligence da SEED"
+        className="absolute inset-0 -z-20 size-full object-cover"
         fill
         priority
         sizes="100vw"
-        src="/brand/seed-identity-board.png"
+        src="/brand/seed-hero-visual.svg"
       />
-      <div className="absolute inset-0 -z-10 bg-[rgba(15,61,62,0.84)]" />
+      <div className="absolute inset-0 -z-10 bg-[rgba(7,31,32,0.42)]" />
+      <HeroMotionLines />
 
-      <div className="mx-auto flex min-h-[78svh] max-w-7xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
+      <div className="relative z-10 mx-auto flex min-h-[78svh] max-w-7xl flex-col justify-center px-4 py-20 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.08] px-3 py-1 text-xs font-extrabold uppercase tracking-normal text-[color:var(--seed-gold-soft)]">
             <ShieldCheck aria-hidden="true" className="size-4" />

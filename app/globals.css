@@ -154,3 +154,106 @@
     color: var(--seed-petroleum);
   }
 }
+
+@layer components {
+  .hero-motion-lines {
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      black 12%,
+      black 78%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      black 12%,
+      black 78%,
+      transparent 100%
+    );
+  }
+
+  .hero-motion-lines__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(220, 235, 233, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(220, 235, 233, 0.05) 1px, transparent 1px);
+    background-size: 8rem 8rem;
+    opacity: 0.18;
+  }
+
+  .hero-motion-lines__line {
+    position: absolute;
+    top: var(--line-top);
+    left: var(--line-left);
+    width: var(--line-width);
+    height: 1px;
+    color: rgba(220, 235, 233, 0.78);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(220, 235, 233, 0.04),
+      rgba(220, 235, 233, 0.48),
+      rgba(220, 235, 233, 0.06),
+      transparent
+    );
+    opacity: 0;
+    transform: rotate(var(--line-rotate)) translate3d(-36%, 0, 0);
+    animation: seed-line-drift var(--line-duration) linear infinite;
+    animation-delay: var(--line-delay);
+  }
+
+  .hero-motion-lines__line::after {
+    position: absolute;
+    top: -2px;
+    right: 22%;
+    width: 5px;
+    height: 5px;
+    border-radius: 999px;
+    background: currentColor;
+    box-shadow: 0 0 18px currentColor;
+    content: "";
+    opacity: 0.65;
+  }
+
+  .hero-motion-lines__line--gold {
+    color: rgba(230, 211, 154, 0.78);
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(230, 211, 154, 0.05),
+      rgba(230, 211, 154, 0.54),
+      rgba(230, 211, 154, 0.08),
+      transparent
+    );
+  }
+
+  @keyframes seed-line-drift {
+    0% {
+      opacity: 0;
+      transform: rotate(var(--line-rotate)) translate3d(-36%, 0, 0);
+    }
+
+    12% {
+      opacity: 0.72;
+    }
+
+    76% {
+      opacity: 0.72;
+    }
+
+    100% {
+      opacity: 0;
+      transform: rotate(var(--line-rotate)) translate3d(42%, 0, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-motion-lines__line {
+      animation: none;
+      opacity: 0.18;
+      transform: rotate(var(--line-rotate)) translate3d(0, 0, 0);
+    }
+  }
+}

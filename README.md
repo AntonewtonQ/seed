@@ -26,6 +26,7 @@ Assets da marca:
 - `public/brand/seed-mark.svg`
 - `public/brand/seed-logo.svg`
 - `public/brand/seed-icon.svg`
+- `public/brand/seed-hero-visual.svg`
 - `public/brand/seed-identity-board.png`
 - `app/icon.svg`
 
