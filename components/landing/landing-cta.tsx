@@ -1,8 +1,8 @@
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { SeedLogo } from "@/components/brand/seed-logo"
 import { Button } from "@/components/ui/button"
-import { seedBrand } from "@/lib/brand"
 
 export function LandingCta() {
   return (
@@ -22,10 +22,10 @@ export function LandingCta() {
           </p>
         </div>
         <Button asChild size="lg" variant="secondary">
-          <a href={`mailto:contacto@${seedBrand.domain}`}>
+          <Link href="/signup">
             Solicitar acesso
             <ArrowRight aria-hidden="true" />
-          </a>
+          </Link>
         </Button>
       </div>
     </section>

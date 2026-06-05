@@ -61,6 +61,10 @@ npm run start
 - `app/layout.tsx`: metadados, idioma e fonte global.
 - `app/globals.css`: tokens da identidade visual, tema shadcn/Tailwind e estilos base.
 - `app/page.tsx`: rota inicial que compoe a landing page.
+- `app/(auth)/login/page.tsx`: pagina de entrada na plataforma.
+- `app/(auth)/signup/page.tsx`: pagina de criacao/solicitacao de acesso.
 - `components/brand/`: componentes reutilizaveis do logotipo.
 - `components/landing/`: secoes e dados da landing page.
+- `components/auth/`: componentes partilhados de login e signup.
 - `lib/brand.ts`: dados centrais da marca.
+- `lib/auth-actions.ts`: acoes provisorias dos formularios de autenticacao.

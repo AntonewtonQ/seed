@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 
 import { SeedLogo } from "@/components/brand/seed-logo"
@@ -30,13 +31,13 @@ export function LandingHeader() {
 
         <div className="flex items-center gap-2">
           <Button asChild className="hidden sm:inline-flex" variant="ghost">
-            <a href="#plataforma">Entrar</a>
+            <Link href="/login">Entrar</Link>
           </Button>
           <Button asChild size="lg">
-            <a href="#começar">
+            <Link href="/signup">
               Solicitar acesso
               <ArrowRight aria-hidden="true" />
-            </a>
+            </Link>
           </Button>
         </div>
       </div>

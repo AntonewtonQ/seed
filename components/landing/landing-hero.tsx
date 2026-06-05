@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { ArrowRight, ShieldCheck } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -45,10 +46,10 @@ export function LandingHero() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" variant="secondary">
-              <a href="#começar">
+              <Link href="/signup">
                 Preparar startup
                 <ArrowRight aria-hidden="true" />
-              </a>
+              </Link>
             </Button>
             <Button
               asChild
@@ -56,15 +57,15 @@ export function LandingHero() {
               size="lg"
               variant="outline"
             >
-              <a href="#plataforma">Avaliar oportunidades</a>
+              <Link href="/signup">Avaliar oportunidades</Link>
             </Button>
           </div>
         </div>
 
-        <div className="mt-12 grid max-w-3xl grid-cols-1 gap-0 border-y border-white/18 sm:grid-cols-3">
+        <div className="mt-12 grid max-w-3xl grid-cols-1 gap-0 border-y border-white/[0.18] sm:grid-cols-3">
           {heroStats.map((stat) => (
             <div
-              className="border-white/18 py-4 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-r-0"
+              className="border-white/[0.18] py-4 sm:border-r sm:px-5 sm:first:pl-0 sm:last:border-r-0"
               key={stat.label}
             >
               <strong className="block text-3xl font-extrabold text-white">

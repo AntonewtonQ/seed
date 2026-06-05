@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { ArrowRight, Bell, MessageSquareText, TrendingUp } from "lucide-react"
 
 import { SeedLogo } from "@/components/brand/seed-logo"
@@ -82,7 +83,7 @@ export function PlatformPreview() {
                     <Bell aria-hidden="true" />
                   </Button>
                   <Button asChild size="lg">
-                    <a href="#começar">Solicitar acesso</a>
+                    <Link href="/signup">Solicitar acesso</Link>
                   </Button>
                 </div>
               </header>
