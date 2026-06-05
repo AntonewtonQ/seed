@@ -10,7 +10,7 @@ export async function loginPreviewAction(formData: FormData) {
     redirect("/login?status=incomplete")
   }
 
-  redirect("/login?status=preview")
+  redirect("/startup/dashboard")
 }
 
 export async function signupPreviewAction(formData: FormData) {
@@ -25,5 +25,5 @@ export async function signupPreviewAction(formData: FormData) {
     redirect("/signup?status=incomplete")
   }
 
-  redirect("/signup?status=preview")
+  redirect("/startup/dashboard")
 }
