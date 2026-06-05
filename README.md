@@ -97,15 +97,32 @@ npm run start
 - `app/(investor)/investor/notifications/page.tsx`: central de notificacoes acionaveis do investidor.
 - `app/(investor)/investor/settings/page.tsx`: preferencias e definicoes do investidor.
 - `app/(investor)/investor/settings/notifications/page.tsx`: preferencias detalhadas de notificacoes.
+- `app/(accelerator)/accelerator/page.tsx`: redireciona a area da aceleradora para o dashboard.
+- `app/(accelerator)/accelerator/dashboard/page.tsx`: visao geral de programas, startups, pipeline e due diligence.
+- `app/(accelerator)/accelerator/profile/page.tsx`: perfil institucional e foco da aceleradora.
+- `app/(accelerator)/accelerator/profile/edit/page.tsx`: wizard de edicao do perfil da aceleradora.
+- `app/(accelerator)/accelerator/startups/page.tsx`: startups acompanhadas pela aceleradora.
+- `app/(accelerator)/accelerator/startups/[startupId]/page.tsx`: detalhe de acompanhamento de uma startup acelerada.
+- `app/(accelerator)/accelerator/programs/page.tsx`: programas, cohorts e marcos da aceleradora.
+- `app/(accelerator)/accelerator/pipeline/page.tsx`: pipeline de preparacao das startups.
+- `app/(accelerator)/accelerator/diligence/page.tsx`: tarefas de due diligence da aceleradora.
+- `app/(accelerator)/accelerator/data-rooms/page.tsx`: estados dos data rooms das startups.
+- `app/(accelerator)/accelerator/messages/page.tsx`: mensagens e formulario de resposta da aceleradora.
+- `app/(accelerator)/accelerator/notifications/page.tsx`: central de notificacoes acionaveis da aceleradora.
+- `app/(accelerator)/accelerator/settings/page.tsx`: preferencias e definicoes da aceleradora.
+- `app/(accelerator)/accelerator/settings/notifications/page.tsx`: preferencias detalhadas de notificacoes.
 - `components/brand/`: componentes reutilizaveis do logotipo.
 - `components/landing/`: secoes e dados da landing page.
 - `components/auth/`: componentes partilhados de login e signup.
 - `components/platform/`: componentes partilhados para shell, navegacao, header, inbox, formularios e wizards.
 - `components/startup/`: shell, navegacao, widgets, dados e paginas modulares da area da startup.
 - `components/investor/`: shell, wrappers, widgets, dados e paginas modulares da area do investidor.
+- `components/accelerator/`: shell, wrappers, widgets, dados e paginas modulares da area da aceleradora.
 - `lib/brand.ts`: dados centrais da marca.
 - `lib/auth-actions.ts`: acoes provisorias dos formularios de autenticacao.
 - `lib/startup-service.ts`: dados mockados e funcoes de leitura preparadas para substituir por API/backend.
 - `lib/startup-actions.ts`: Server Actions provisorias para mutacoes futuras da area da startup.
 - `lib/investor-service.ts`: dados mockados e funcoes de leitura preparadas para substituir por API/backend.
 - `lib/investor-actions.ts`: Server Actions provisorias para mutacoes futuras da area do investidor.
+- `lib/accelerator-service.ts`: dados mockados e funcoes de leitura preparadas para substituir por API/backend.
+- `lib/accelerator-actions.ts`: Server Actions provisorias para mutacoes futuras da area da aceleradora.
