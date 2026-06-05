@@ -1,26 +1,26 @@
 import { PlatformPageHeader } from "@/components/platform/platform-page-header"
 
-import { StartupHeaderInbox } from "./startup-header-inbox"
+import { InvestorHeaderInbox } from "./investor-header-inbox"
 
-type StartupPageHeaderProps = {
+type InvestorPageHeaderProps = {
   title: string
   description: string
-  eyebrow?: string
   action?: React.ReactNode
+  eyebrow?: string
 }
 
-export function StartupPageHeader({
+export function InvestorPageHeader({
   action,
   description,
-  eyebrow = "Área da startup",
+  eyebrow = "Área do investidor",
   title,
-}: StartupPageHeaderProps) {
+}: InvestorPageHeaderProps) {
   return (
     <PlatformPageHeader
       action={action}
       description={description}
       eyebrow={eyebrow}
-      inbox={<StartupHeaderInbox />}
+      inbox={<InvestorHeaderInbox />}
       title={title}
     />
   )

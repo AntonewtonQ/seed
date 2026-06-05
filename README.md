@@ -84,11 +84,28 @@ npm run start
 - `app/(startup)/startup/notifications/page.tsx`: central de notificacoes acionaveis.
 - `app/(startup)/startup/settings/page.tsx`: preferencias e definicoes da startup.
 - `app/(startup)/startup/settings/notifications/page.tsx`: preferencias detalhadas de notificacoes.
+- `app/(investor)/investor/page.tsx`: redireciona a area do investidor para o dashboard.
+- `app/(investor)/investor/dashboard/page.tsx`: visao geral do mandato, oportunidades, pipeline e due diligence.
+- `app/(investor)/investor/profile/page.tsx`: perfil, tese e criterios do investidor.
+- `app/(investor)/investor/profile/edit/page.tsx`: wizard de edicao do mandato do investidor.
+- `app/(investor)/investor/opportunities/page.tsx`: oportunidades recomendadas por matching.
+- `app/(investor)/investor/opportunities/[startupId]/page.tsx`: detalhe de oportunidade/startup para analise.
+- `app/(investor)/investor/pipeline/page.tsx`: pipeline de investimento por fase e proxima acao.
+- `app/(investor)/investor/diligence/page.tsx`: tarefas de due diligence do investidor.
+- `app/(investor)/investor/data-rooms/page.tsx`: data rooms acessiveis ao investidor.
+- `app/(investor)/investor/messages/page.tsx`: mensagens e formulario de resposta do investidor.
+- `app/(investor)/investor/notifications/page.tsx`: central de notificacoes acionaveis do investidor.
+- `app/(investor)/investor/settings/page.tsx`: preferencias e definicoes do investidor.
+- `app/(investor)/investor/settings/notifications/page.tsx`: preferencias detalhadas de notificacoes.
 - `components/brand/`: componentes reutilizaveis do logotipo.
 - `components/landing/`: secoes e dados da landing page.
 - `components/auth/`: componentes partilhados de login e signup.
+- `components/platform/`: componentes partilhados para shell, navegacao, header, inbox, formularios e wizards.
 - `components/startup/`: shell, navegacao, widgets, dados e paginas modulares da area da startup.
+- `components/investor/`: shell, wrappers, widgets, dados e paginas modulares da area do investidor.
 - `lib/brand.ts`: dados centrais da marca.
 - `lib/auth-actions.ts`: acoes provisorias dos formularios de autenticacao.
 - `lib/startup-service.ts`: dados mockados e funcoes de leitura preparadas para substituir por API/backend.
 - `lib/startup-actions.ts`: Server Actions provisorias para mutacoes futuras da area da startup.
+- `lib/investor-service.ts`: dados mockados e funcoes de leitura preparadas para substituir por API/backend.
+- `lib/investor-actions.ts`: Server Actions provisorias para mutacoes futuras da area do investidor.
