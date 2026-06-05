@@ -1,0 +1,10 @@
+<svg viewBox="0 0 560 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="seed-logo-title">
+  <title id="seed-logo-title">SEED logo</title>
+  <circle cx="62" cy="25" r="14" fill="#0F3D3E"/>
+  <path d="M45 42 17 59v43l28 17" fill="none" stroke="#0F3D3E" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M79 42 107 59v43l-28 17" fill="none" stroke="#C9A227" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M62 58 36 86h15v42h22V86h15L62 58Z" fill="#0F3D3E"/>
+  <path d="M142 25v100" stroke="#0F3D3E" stroke-opacity=".32" stroke-width="2"/>
+  <text x="176" y="83" fill="#0F3D3E" font-family="Manrope, Arial, sans-serif" font-size="64" font-weight="800" letter-spacing="0">SEED</text>
+  <text x="180" y="117" fill="#172F30" font-family="Manrope, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="0">A ponte segura entre startups aceleradas e capital inteligente.</text>
+</svg>

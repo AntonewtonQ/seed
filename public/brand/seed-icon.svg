@@ -1,0 +1,15 @@
+<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="seed-icon-title">
+  <title id="seed-icon-title">SEED icon</title>
+  <rect width="128" height="128" rx="24" fill="#0F3D3E"/>
+  <path d="M0 0h128v128H0z" fill="url(#seed-icon-gradient)" opacity=".72"/>
+  <circle cx="64" cy="25" r="10" fill="#F7F2E3"/>
+  <path d="M52 36 32 48v31l20 13" fill="none" stroke="#DCEBE9" stroke-opacity=".82" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M76 36 96 48v31L76 92" fill="none" stroke="#C9A227" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M64 47 45 67h11v31h16V67h11L64 47Z" fill="#FFFFFF"/>
+  <defs>
+    <linearGradient id="seed-icon-gradient" x1="20" x2="108" y1="118" y2="10" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#145A5B"/>
+      <stop offset="1" stop-color="#0F3D3E"/>
+    </linearGradient>
+  </defs>
+</svg>
