@@ -1,0 +1,861 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SEED Pitch Deck</title>
+    <style>
+      @page {
+        size: 13.333in 7.5in;
+        margin: 0;
+      }
+
+      :root {
+        --petroleum: #0f3d3e;
+        --petroleum-2: #145a5b;
+        --petroleum-3: #2f7270;
+        --tint: #dcebe9;
+        --gold: #c9a227;
+        --gold-2: #e6d39a;
+        --cream: #f7f2e3;
+        --paper: #fbfaf5;
+        --ink: #102f30;
+        --muted: #587071;
+        --line: rgba(15, 61, 62, 0.16);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: #e9efec;
+        color: var(--ink);
+        font-family: Manrope, Inter, "Segoe UI", Arial, sans-serif;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .slide {
+        position: relative;
+        display: grid;
+        width: 13.333in;
+        height: 7.5in;
+        overflow: hidden;
+        page-break-after: always;
+        break-after: page;
+        background:
+          linear-gradient(110deg, rgba(220, 235, 233, 0.86), rgba(247, 242, 227, 0.6)),
+          var(--paper);
+        padding: 0.62in 0.72in;
+      }
+
+      .slide::before {
+        position: absolute;
+        inset: -0.4in;
+        content: "";
+        background-image:
+          linear-gradient(115deg, transparent 0 44%, rgba(15, 61, 62, 0.08) 44.2% 44.6%, transparent 44.8%),
+          linear-gradient(115deg, transparent 0 60%, rgba(201, 162, 39, 0.18) 60.2% 60.6%, transparent 60.8%),
+          linear-gradient(115deg, transparent 0 76%, rgba(15, 61, 62, 0.06) 76.2% 76.55%, transparent 76.7%);
+        background-size: 4.7in 4.7in, 5.6in 5.6in, 6.4in 6.4in;
+        opacity: 0.72;
+        pointer-events: none;
+      }
+
+      .slide::after {
+        position: absolute;
+        inset: auto 0.72in 0.36in 0.72in;
+        height: 1px;
+        content: "";
+        background: linear-gradient(90deg, transparent, rgba(15, 61, 62, 0.28), transparent);
+      }
+
+      .dark {
+        background:
+          radial-gradient(circle at 84% 20%, rgba(230, 211, 154, 0.18), transparent 26%),
+          linear-gradient(120deg, #092829 0%, #0f3d3e 58%, #154f50 100%);
+        color: #fffdf5;
+      }
+
+      .dark::before {
+        opacity: 0.5;
+        background-image:
+          linear-gradient(115deg, transparent 0 48%, rgba(255, 255, 255, 0.1) 48.2% 48.55%, transparent 48.8%),
+          linear-gradient(115deg, transparent 0 66%, rgba(201, 162, 39, 0.34) 66.2% 66.6%, transparent 66.8%),
+          linear-gradient(115deg, transparent 0 78%, rgba(220, 235, 233, 0.1) 78.2% 78.55%, transparent 78.8%);
+      }
+
+      .dark::after {
+        background: linear-gradient(90deg, transparent, rgba(247, 242, 227, 0.34), transparent);
+      }
+
+      .content {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        min-height: 100%;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 0.48in;
+        margin-bottom: 0.28in;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.09in;
+        font-size: 0.21in;
+        font-weight: 900;
+        letter-spacing: 0;
+        color: inherit;
+      }
+
+      .brand img {
+        width: 0.36in;
+        height: auto;
+      }
+
+      .brand-mark {
+        width: 0.38in;
+        height: 0.38in;
+      }
+
+      .kicker {
+        display: inline-flex;
+        width: max-content;
+        align-items: center;
+        gap: 0.08in;
+        border: 1px solid rgba(201, 162, 39, 0.36);
+        border-radius: 999px;
+        background: rgba(247, 242, 227, 0.22);
+        padding: 0.06in 0.13in;
+        color: var(--gold);
+        font-size: 0.12in;
+        font-weight: 900;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .dark .kicker {
+        background: rgba(255, 255, 255, 0.09);
+        color: var(--gold-2);
+      }
+
+      .slide-number {
+        color: currentColor;
+        font-size: 0.12in;
+        font-weight: 900;
+        opacity: 0.62;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        max-width: 8.8in;
+        font-size: 0.84in;
+        line-height: 0.94;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        max-width: 8.3in;
+        font-size: 0.53in;
+        line-height: 1;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      h3 {
+        font-size: 0.23in;
+        line-height: 1.14;
+        font-weight: 900;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 7.6in;
+        color: var(--muted);
+        font-size: 0.24in;
+        font-weight: 750;
+        line-height: 1.42;
+      }
+
+      .dark .lead,
+      .dark .muted {
+        color: rgba(255, 253, 245, 0.76);
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.24in;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.2in;
+      }
+
+      .grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.16in;
+      }
+
+      .card {
+        border: 1px solid rgba(15, 61, 62, 0.12);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.7);
+        box-shadow: 0 18px 44px rgba(15, 61, 62, 0.08);
+        padding: 0.23in;
+      }
+
+      .dark .card {
+        border-color: rgba(247, 242, 227, 0.14);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 18px 44px rgba(0, 0, 0, 0.16);
+      }
+
+      .card p,
+      li {
+        color: var(--muted);
+        font-size: 0.17in;
+        font-weight: 650;
+        line-height: 1.38;
+      }
+
+      .dark .card p,
+      .dark li {
+        color: rgba(255, 253, 245, 0.72);
+      }
+
+      ul {
+        display: grid;
+        gap: 0.12in;
+        padding-left: 0.22in;
+        margin: 0;
+      }
+
+      li::marker {
+        color: var(--gold);
+      }
+
+      .pill-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.09in;
+      }
+
+      .pill {
+        border: 1px solid rgba(15, 61, 62, 0.14);
+        border-radius: 999px;
+        background: rgba(220, 235, 233, 0.72);
+        padding: 0.07in 0.13in;
+        color: var(--petroleum);
+        font-size: 0.13in;
+        font-weight: 900;
+      }
+
+      .dark .pill {
+        border-color: rgba(247, 242, 227, 0.16);
+        background: rgba(255, 255, 255, 0.09);
+        color: var(--cream);
+      }
+
+      .metric {
+        border-left: 2px solid var(--gold);
+        padding: 0.06in 0.16in;
+      }
+
+      .metric strong {
+        display: block;
+        color: var(--petroleum);
+        font-size: 0.46in;
+        font-weight: 900;
+        line-height: 1;
+      }
+
+      .dark .metric strong {
+        color: #fffdf5;
+      }
+
+      .metric span {
+        display: block;
+        margin-top: 0.05in;
+        color: var(--muted);
+        font-size: 0.14in;
+        font-weight: 800;
+      }
+
+      .dark .metric span {
+        color: rgba(255, 253, 245, 0.68);
+      }
+
+      .timeline {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0;
+        margin-top: 0.25in;
+      }
+
+      .step {
+        position: relative;
+        border-top: 2px solid rgba(15, 61, 62, 0.22);
+        padding: 0.22in 0.16in 0 0;
+      }
+
+      .dark .step {
+        border-top-color: rgba(247, 242, 227, 0.24);
+      }
+
+      .step::before {
+        position: absolute;
+        top: -0.075in;
+        left: 0;
+        width: 0.14in;
+        height: 0.14in;
+        border-radius: 999px;
+        background: var(--gold);
+        content: "";
+      }
+
+      .step span {
+        display: block;
+        margin-bottom: 0.07in;
+        color: var(--gold);
+        font-size: 0.12in;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .step p {
+        color: var(--muted);
+        font-size: 0.145in;
+        font-weight: 650;
+        line-height: 1.34;
+      }
+
+      .dark .step p {
+        color: rgba(255, 253, 245, 0.72);
+      }
+
+      .cover {
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 0.42in;
+        align-items: center;
+      }
+
+      .cover h1 {
+        margin-top: 0.28in;
+        font-size: 1.1in;
+      }
+
+      .cover .lead {
+        margin-top: 0.28in;
+        color: rgba(255, 253, 245, 0.76);
+        font-size: 0.28in;
+      }
+
+      .cover-meta {
+        display: grid;
+        grid-template-columns: repeat(3, max-content);
+        gap: 0.12in;
+        margin-top: 0.38in;
+      }
+
+      .cover-meta span {
+        border: 1px solid rgba(247, 242, 227, 0.18);
+        border-radius: 999px;
+        padding: 0.08in 0.14in;
+        color: rgba(255, 253, 245, 0.78);
+        font-size: 0.13in;
+        font-weight: 850;
+      }
+
+      .product-stack {
+        display: grid;
+        gap: 0.16in;
+      }
+
+      .product-panel {
+        border: 1px solid rgba(247, 242, 227, 0.14);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.09);
+        padding: 0.22in;
+        box-shadow: 0 24px 58px rgba(0, 0, 0, 0.18);
+      }
+
+      .product-panel header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 0.2in;
+      }
+
+      .mini-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.08in;
+      }
+
+      .mini-cell {
+        border-radius: 7px;
+        background: rgba(255, 255, 255, 0.1);
+        padding: 0.12in;
+      }
+
+      .mini-cell strong {
+        display: block;
+        color: #fffdf5;
+        font-size: 0.28in;
+        line-height: 1;
+      }
+
+      .mini-cell span {
+        display: block;
+        margin-top: 0.04in;
+        color: rgba(255, 253, 245, 0.62);
+        font-size: 0.1in;
+        font-weight: 850;
+      }
+
+      .funnel {
+        display: grid;
+        gap: 0.08in;
+      }
+
+      .bar {
+        display: grid;
+        grid-template-columns: 1.45in 1fr 0.28in;
+        gap: 0.12in;
+        align-items: center;
+        color: rgba(255, 253, 245, 0.72);
+        font-size: 0.12in;
+        font-weight: 850;
+      }
+
+      .bar-track {
+        height: 0.13in;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .bar-fill {
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--tint), var(--gold));
+      }
+
+      .statement {
+        align-self: end;
+        max-width: 10.4in;
+        color: var(--petroleum);
+        font-size: 0.4in;
+        font-weight: 900;
+        line-height: 1.12;
+      }
+
+      .dark .statement {
+        color: #fffdf5;
+      }
+
+      .matrix {
+        display: grid;
+        grid-template-columns: 1.1fr 1.1fr 1.1fr;
+        gap: 0.18in;
+      }
+
+      .matrix .card {
+        min-height: 3.05in;
+      }
+
+      .label {
+        display: inline-block;
+        margin-bottom: 0.12in;
+        color: var(--gold);
+        font-size: 0.12in;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      .footer-note {
+        align-self: end;
+        color: var(--muted);
+        font-size: 0.12in;
+        font-weight: 750;
+      }
+
+      .dark .footer-note {
+        color: rgba(255, 253, 245, 0.62);
+      }
+
+      .large-mark {
+        position: absolute;
+        right: -0.2in;
+        bottom: -0.24in;
+        width: 4.4in;
+        opacity: 0.08;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="slide dark">
+      <div class="content cover">
+        <div>
+          <div class="kicker">Capital inteligente com processos seguros</div>
+          <h1>SEED</h1>
+          <p class="lead">
+            A ponte segura entre startups aceleradas e capital inteligente.
+          </p>
+          <div class="cover-meta">
+            <span>Pitch deck</span>
+            <span>Junho 2026</span>
+            <span>Luanda, Angola</span>
+          </div>
+        </div>
+
+        <div class="product-stack">
+          <div class="product-panel">
+            <header>
+              <img src="../../public/brand/seed-mark.svg" alt="SEED" class="brand-mark" />
+              <span class="slide-number">Produto</span>
+            </header>
+            <div class="mini-grid">
+              <div class="mini-cell"><strong>24</strong><span>startups preparadas</span></div>
+              <div class="mini-cell"><strong>36</strong><span>investidores qualificados</span></div>
+              <div class="mini-cell"><strong>18</strong><span>data rooms ativos</span></div>
+              <div class="mini-cell"><strong>7</strong><span>negociações</span></div>
+            </div>
+          </div>
+
+          <div class="product-panel">
+            <header>
+              <h3>Pipeline de investimentos</h3>
+              <span class="slide-number">SEED</span>
+            </header>
+            <div class="funnel">
+              <div class="bar"><span>Triagem</span><div class="bar-track"><div class="bar-fill" style="width: 100%"></div></div><span>48</span></div>
+              <div class="bar"><span>Avaliação</span><div class="bar-track"><div class="bar-fill" style="width: 72%"></div></div><span>24</span></div>
+              <div class="bar"><span>Due diligence</span><div class="bar-track"><div class="bar-fill" style="width: 48%"></div></div><span>12</span></div>
+              <div class="bar"><span>Term sheet</span><div class="bar-track"><div class="bar-fill" style="width: 32%"></div></div><span>7</span></div>
+              <div class="bar"><span>Fechado</span><div class="bar-track"><div class="bar-fill" style="width: 20%"></div></div><span>3</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <img src="../../public/brand/seed-mark.svg" alt="" class="large-mark" />
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">02</span>
+        </div>
+        <div>
+          <div class="kicker">Problema</div>
+          <h2>O caminho entre uma startup promissora e um investidor ainda é lento, disperso e pouco confiável.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="label">Startups</span>
+            <h3>Chegam despreparadas</h3>
+            <p>Métricas, narrativa, documentos e pedido de capital ficam espalhados em anexos, pastas e versões difíceis de validar.</p>
+          </article>
+          <article class="card">
+            <span class="label">Investidores</span>
+            <h3>Perdem tempo na triagem</h3>
+            <p>Faltam dados comparáveis, acesso controlado e histórico claro para decidir quais oportunidades merecem análise profunda.</p>
+          </article>
+          <article class="card">
+            <span class="label">Aceleradoras</span>
+            <h3>Acompanham tudo manualmente</h3>
+            <p>Programas e cohorts precisam provar evolução das startups, mas a preparação para investimento ainda depende de processos frágeis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">03</span>
+        </div>
+        <div>
+          <div class="kicker">Oportunidade</div>
+          <h2>Ecossistemas emergentes precisam de uma camada de confiança para transformar preparação em capital.</h2>
+        </div>
+        <div class="grid-2">
+          <div class="statement">
+            Angola primeiro. Depois, mercados lusófonos e africanos com o mesmo desafio: bons projetos, pouca estrutura e capital cauteloso.
+          </div>
+          <div class="card">
+            <ul>
+              <li>Mais programas de aceleração aumentam o número de startups em busca de capital.</li>
+              <li>Investidores precisam reduzir risco antes de abrir negociações.</li>
+              <li>Documentos e due diligence digital tornam o processo mais auditável.</li>
+              <li>Uma plataforma local pode padronizar linguagem, confiança e colaboração.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">04</span>
+        </div>
+        <div>
+          <div class="kicker">Solução</div>
+          <h2>SEED organiza o processo de investimento antes, durante e depois da primeira conversa.</h2>
+          <p class="lead" style="margin-top: 0.24in">
+            A plataforma conecta startups aceleradas, investidores e aceleradoras num fluxo único de preparação, avaliação, data room, due diligence e decisão.
+          </p>
+        </div>
+        <div class="timeline">
+          <div class="step"><span>01</span><h3>Preparar</h3><p>Perfil, equipa, métricas, pitch e objetivo de captação.</p></div>
+          <div class="step"><span>02</span><h3>Validar</h3><p>Checklist de prontidão e data room estruturado.</p></div>
+          <div class="step"><span>03</span><h3>Qualificar</h3><p>Matching com investidores e critérios de mandato.</p></div>
+          <div class="step"><span>04</span><h3>Analisar</h3><p>Due diligence com tarefas, evidências e mensagens.</p></div>
+          <div class="step"><span>05</span><h3>Decidir</h3><p>Pipeline até negociação, term sheet ou encerramento.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">05</span>
+        </div>
+        <div>
+          <div class="kicker">Produto</div>
+          <h2>Três perfis, uma experiência conectada.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="label">Startup</span>
+            <h3>Prontidão para investimento</h3>
+            <p>Dashboard, perfil, pitch, métricas, funding, equipa, documentos, checklist, mensagens e notificações.</p>
+          </article>
+          <article class="card">
+            <span class="label">Investidor</span>
+            <h3>Análise qualificada</h3>
+            <p>Oportunidades recomendadas, pipeline, data rooms, due diligence, mensagens e preferências de mandato.</p>
+          </article>
+          <article class="card">
+            <span class="label">Aceleradora</span>
+            <h3>Gestão de cohorts</h3>
+            <p>Programas, startups acompanhadas, preparação, pipeline, data rooms, diligence e comunicação com o ecossistema.</p>
+          </article>
+        </div>
+        <div class="pill-row">
+          <span class="pill">Data Room</span>
+          <span class="pill">Investor Pipeline</span>
+          <span class="pill">Due Diligence</span>
+          <span class="pill">Mensagens seguras</span>
+          <span class="pill">Notificações acionáveis</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">06</span>
+        </div>
+        <div>
+          <div class="kicker">Diferenciais</div>
+          <h2>SEED não é só uma pasta de documentos. É o fluxo operacional do investimento.</h2>
+        </div>
+        <div class="grid-4">
+          <article class="card">
+            <h3>Padronização</h3>
+            <p>Perfis e métricas comparáveis para reduzir fricção na análise inicial.</p>
+          </article>
+          <article class="card">
+            <h3>Controlo</h3>
+            <p>Acesso a documentos por contexto, oportunidade e etapa de negociação.</p>
+          </article>
+          <article class="card">
+            <h3>Rastreabilidade</h3>
+            <p>Histórico de atividades, mensagens, tarefas e validações em cada processo.</p>
+          </article>
+          <article class="card">
+            <h3>Foco local</h3>
+            <p>Experiência desenhada para startups, investidores e aceleradoras do nosso mercado.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">07</span>
+        </div>
+        <div>
+          <div class="kicker">Modelo de negócio</div>
+          <h2>Receita recorrente com serviços de confiança em torno do processo de captação.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="label">SaaS B2B</span>
+            <h3>Planos para aceleradoras</h3>
+            <p>Gestão de cohorts, startups, data rooms, pipeline de preparação e relatórios.</p>
+          </article>
+          <article class="card">
+            <span class="label">Investidores</span>
+            <h3>Plano de análise</h3>
+            <p>Acesso a oportunidades qualificadas, pipeline, due diligence e colaboração com a equipa.</p>
+          </article>
+          <article class="card">
+            <span class="label">Add-ons</span>
+            <h3>Serviços premium</h3>
+            <p>Data room avançado, auditoria de documentos, relatórios de prontidão e suporte a programas.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">08</span>
+        </div>
+        <div>
+          <div class="kicker">Go-to-market</div>
+          <h2>Entrar pelo lado onde a confiança já existe: aceleradoras, universidades e comunidades empreendedoras.</h2>
+        </div>
+        <div class="timeline">
+          <div class="step"><span>Fase 1</span><h3>Pilotos</h3><p>Selecionar 1 a 2 programas com startups em preparação para captação.</p></div>
+          <div class="step"><span>Fase 2</span><h3>Startups</h3><p>Onboardings guiados com perfil, pitch e data room mínimo.</p></div>
+          <div class="step"><span>Fase 3</span><h3>Investidores</h3><p>Convidar investidores com critérios claros e oportunidades curadas.</p></div>
+          <div class="step"><span>Fase 4</span><h3>Casos</h3><p>Medir tempo de preparação, engajamento e qualidade da diligência.</p></div>
+          <div class="step"><span>Fase 5</span><h3>Escala</h3><p>Expandir para novos cohorts, hubs e mercados lusófonos.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">09</span>
+        </div>
+        <div>
+          <div class="kicker">Estado atual</div>
+          <h2>Base de produto já desenhada para receber dados reais e evoluir para backend.</h2>
+        </div>
+        <div class="grid-3">
+          <div class="metric"><strong>3</strong><span>perfis principais: startup, investidor e aceleradora</span></div>
+          <div class="metric"><strong>40+</strong><span>rotas e telas modulares preparadas</span></div>
+          <div class="metric"><strong>5</strong><span>módulos centrais: pitch, data room, pipeline, diligence e mensagens</span></div>
+        </div>
+        <div class="card">
+          <ul>
+            <li>Landing page, autenticação e experiências por perfil já estruturadas.</li>
+            <li>Componentes reutilizáveis para shell, navegação, mensagens, formulários e wizards.</li>
+            <li>Dados mockados e ações preparadas para substituição por API e PostgreSQL.</li>
+          </ul>
+        </div>
+        <p class="footer-note">Nota: os números de produto referem-se ao estado atual do MVP em desenvolvimento, não a tração comercial.</p>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">10</span>
+        </div>
+        <div>
+          <div class="kicker">Roadmap</div>
+          <h2>Do MVP visual para uma plataforma segura, mensurável e pronta para pilotos.</h2>
+        </div>
+        <div class="timeline">
+          <div class="step"><span>Agora</span><h3>Backend</h3><p>API Node.js/TypeScript, PostgreSQL, autenticação e permissões por papel.</p></div>
+          <div class="step"><span>Depois</span><h3>Data room</h3><p>Upload seguro, versionamento, categorias e histórico de acesso.</p></div>
+          <div class="step"><span>Piloto</span><h3>Fluxos reais</h3><p>Startups, aceleradora e investidores usando o mesmo processo.</p></div>
+          <div class="step"><span>Medição</span><h3>Analytics</h3><p>Indicadores de prontidão, tempo de análise e avanço no pipeline.</p></div>
+          <div class="step"><span>Escala</span><h3>Automação</h3><p>Recomendações, scoring de prontidão e relatórios inteligentes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">11</span>
+        </div>
+        <div>
+          <div class="kicker">Pedido</div>
+          <h2>Procuramos parceiros para validar o SEED com dados, utilizadores e decisões reais.</h2>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <span class="label">Aceleradoras</span>
+            <h3>Piloto com cohorts</h3>
+            <p>Testar preparação, data rooms, checklist e comunicação com startups acompanhadas.</p>
+          </article>
+          <article class="card">
+            <span class="label">Investidores</span>
+            <h3>Mandatos de validação</h3>
+            <p>Avaliar oportunidades qualificadas e melhorar critérios, etapas e relatórios.</p>
+          </article>
+          <article class="card">
+            <span class="label">Capital e suporte</span>
+            <h3>Construção do MVP</h3>
+            <p>Apoio técnico, cloud credits, mentoria regulatória e investimento pré-seed.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="slide dark">
+      <div class="content">
+        <div class="topbar">
+          <div class="brand"><img src="../../public/brand/seed-mark.svg" alt="" /><span>SEED</span></div>
+          <span class="slide-number">12</span>
+        </div>
+        <div>
+          <div class="kicker">Encerramento</div>
+          <h1 style="font-size: 0.9in; max-width: 9.4in">Capital precisa de confiança. Startups precisam de um caminho.</h1>
+          <p class="lead" style="margin-top: 0.28in">
+            SEED constrói essa ponte com informação estruturada, acesso controlado e processos de investimento mais claros.
+          </p>
+        </div>
+        <div class="cover-meta" style="align-self: end">
+          <span>seed.ao</span>
+          <span>Luanda, Angola</span>
+          <span>A ponte segura entre startups aceleradas e capital inteligente.</span>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

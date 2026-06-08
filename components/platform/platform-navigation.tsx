@@ -13,15 +13,23 @@ export type PlatformNavigationItem = {
 }
 
 type PlatformNavigationProps = {
+  collapsed?: boolean
   items: PlatformNavigationItem[]
   label: string
 }
 
-export function PlatformNavigation({ items, label }: PlatformNavigationProps) {
+export function PlatformNavigation({
+  collapsed = false,
+  items,
+  label,
+}: PlatformNavigationProps) {
   const pathname = usePathname()
 
   return (
-    <nav aria-label={label} className="mt-8 grid gap-1.5">
+    <nav
+      aria-label={label}
+      className={cn("mt-8 grid gap-1.5", collapsed && "justify-items-center")}
+    >
       {items.map((item) => {
         const Icon = item.icon
         const isActive =
@@ -30,17 +38,22 @@ export function PlatformNavigation({ items, label }: PlatformNavigationProps) {
 
         return (
           <Link
+            aria-label={collapsed ? item.label : undefined}
             className={cn(
-              "flex h-10 items-center gap-3 rounded-lg px-3 text-sm font-semibold transition-colors",
+              "flex h-10 items-center rounded-lg text-sm font-semibold transition-colors",
+              collapsed
+                ? "w-10 justify-center px-0"
+                : "w-full gap-3 px-3",
               isActive
                 ? "bg-[color:var(--seed-cream)] text-[color:var(--seed-petroleum)]"
                 : "text-[color:var(--seed-tint)] hover:bg-white/10 hover:text-white"
             )}
             href={item.href}
             key={item.href}
+            title={collapsed ? item.label : undefined}
           >
             <Icon aria-hidden="true" className="size-4" />
-            <span className="truncate">{item.label}</span>
+            {collapsed ? null : <span className="truncate">{item.label}</span>}
           </Link>
         )
       })}
