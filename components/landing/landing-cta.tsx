@@ -17,13 +17,13 @@ export function LandingCta() {
             Prepare a próxima conversa de investimento com mais clareza.
           </h2>
           <p className="mt-4 max-w-2xl text-base font-medium leading-7 text-[color:var(--seed-tint)]">
-            A SEED aproxima startups preparadas e investidores qualificados num
-            processo mais seguro, organizado e fácil de acompanhar.
+            Explore o fluxo local com contas de demonstração: organize uma ronda,
+            acompanhe negociações e controle o acesso aos documentos.
           </p>
         </div>
         <Button asChild size="lg" variant="secondary">
-          <Link href="/signup">
-            Solicitar acesso
+          <Link href="/login">
+            Entrar na demonstração
             <ArrowRight aria-hidden="true" />
           </Link>
         </Button>

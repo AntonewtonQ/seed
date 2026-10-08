@@ -1,0 +1,1575 @@
+{
+  "audit": {
+    "analysis_date": "2026-10-08",
+    "xlsx_sha256": "3c8f305cd34208a2dff593c1ec233e11214257c6d909fcaf6641617e99c555b2",
+    "sheets": [
+      {
+        "sheet": "Respostas do Formulário 1",
+        "state": "visible",
+        "physical_rows": 25,
+        "nonempty_rows": 25,
+        "columns": 33,
+        "formula_cells": 0
+      }
+    ],
+    "exported_submissions": 24,
+    "consent_yes": 24,
+    "included_records": 24,
+    "excluded_records": 0,
+    "unique_participants": "Não verificável: ausência de identificador autenticado; contactos distintos não comprovam pessoas distintas",
+    "contact_present": 20,
+    "distinct_contact_strings": 20,
+    "contact_without_yes": 0,
+    "exact_duplicate_excess": 0,
+    "duplicate_answer_patterns_excluding_time_contact": 0,
+    "first_observed": "2026-02-05 14:42:21.797000",
+    "last_observed": "2026-02-10 08:36:36.288000",
+    "timezone": "Não indicado na exportação; não convertido",
+    "reference_screenshot_count": 24,
+    "reference_count_matches": true,
+    "screenshots_available": false,
+    "pdf_pages": 240,
+    "pdf_individual_blocks": 24
+  },
+  "frequencies": [
+    {
+      "variable": "Q01",
+      "category": "Sim, aceito participar.",
+      "n": 24,
+      "percent": 100.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q01",
+      "category": "Não aceito participar.",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q02",
+      "category": "Fundador(a) ou membro de startup acelerada",
+      "n": 17,
+      "percent": 70.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q02",
+      "category": "Representante de aceleradora/incubadora",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q02",
+      "category": "Investidor(a) (angel, venture capital, corporate venture)",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q02",
+      "category": "Outra",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q03",
+      "category": "Menos de 1 ano",
+      "n": 11,
+      "percent": 45.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q03",
+      "category": "De 1 a 3 anos",
+      "n": 11,
+      "percent": 45.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q03",
+      "category": "De 4 a 6 anos",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q03",
+      "category": "Mais de 6 anos",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q04",
+      "category": "Angola",
+      "n": 23,
+      "percent": 95.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q04",
+      "category": "Angola, Portugal",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q05",
+      "category": "Luanda",
+      "n": 20,
+      "percent": 83.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q05",
+      "category": "Luanda e Bengo.",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q05",
+      "category": "Luanda e Icolo e Bengo",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q05",
+      "category": "Luanda, Viana",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q05",
+      "category": "Malanje",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q06",
+      "category": "Sim, existe um processo bem estruturado.",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q06",
+      "category": "Existe um processo, mas pouco estruturado.",
+      "n": 10,
+      "percent": 41.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q06",
+      "category": "Não existe um processo claramente definido.",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q06",
+      "category": "Não sei / Não se aplica.",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q07",
+      "category": "E-mail",
+      "n": 12,
+      "percent": 50.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q07",
+      "category": "Ficheiros Excel/folhas de cálculo",
+      "n": 12,
+      "percent": 50.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q07",
+      "category": "Documentos partilhados (Google Drive, OneDrive, etc.)",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q07",
+      "category": "Ferramentas genéricas de gestão de projecto (Trello, Asana, etc.)",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q07",
+      "category": "Plataforma específica para gestão de investimento",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q07",
+      "category": "Nunca fiz isso",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q07",
+      "category": "Participação em eventos de Startup, feiras",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q08a",
+      "category": "Discordo totalmente",
+      "n": 7,
+      "percent": 29.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08a",
+      "category": "Discordo",
+      "n": 9,
+      "percent": 37.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08a",
+      "category": "Nem concordo nem discordo",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08a",
+      "category": "Concordo",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08a",
+      "category": "Concordo totalmente",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08b",
+      "category": "Discordo totalmente",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08b",
+      "category": "Discordo",
+      "n": 11,
+      "percent": 45.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08b",
+      "category": "Nem concordo nem discordo",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08b",
+      "category": "Concordo",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08b",
+      "category": "Concordo totalmente",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08c",
+      "category": "Discordo totalmente",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08c",
+      "category": "Discordo",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08c",
+      "category": "Nem concordo nem discordo",
+      "n": 7,
+      "percent": 29.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08c",
+      "category": "Concordo",
+      "n": 9,
+      "percent": 37.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08c",
+      "category": "Concordo totalmente",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08d",
+      "category": "Discordo totalmente",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08d",
+      "category": "Discordo",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08d",
+      "category": "Nem concordo nem discordo",
+      "n": 10,
+      "percent": 41.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08d",
+      "category": "Concordo",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08d",
+      "category": "Concordo totalmente",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08e",
+      "category": "Discordo totalmente",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08e",
+      "category": "Discordo",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08e",
+      "category": "Nem concordo nem discordo",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08e",
+      "category": "Concordo",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q08e",
+      "category": "Concordo totalmente",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09a",
+      "category": "Nunca",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09a",
+      "category": "Raramente",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09a",
+      "category": "Às vezes",
+      "n": 7,
+      "percent": 29.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09a",
+      "category": "Frequentemente",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09a",
+      "category": "Quase sempre",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09b",
+      "category": "Nunca",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09b",
+      "category": "Raramente",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09b",
+      "category": "Às vezes",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09b",
+      "category": "Frequentemente",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09b",
+      "category": "Quase sempre",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09c",
+      "category": "Nunca",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09c",
+      "category": "Raramente",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09c",
+      "category": "Às vezes",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09c",
+      "category": "Frequentemente",
+      "n": 7,
+      "percent": 29.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09c",
+      "category": "Quase sempre",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09d",
+      "category": "Nunca",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09d",
+      "category": "Raramente",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09d",
+      "category": "Às vezes",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09d",
+      "category": "Frequentemente",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09d",
+      "category": "Quase sempre",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09e",
+      "category": "Nunca",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09e",
+      "category": "Raramente",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09e",
+      "category": "Às vezes",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09e",
+      "category": "Frequentemente",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q09e",
+      "category": "Quase sempre",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q10",
+      "category": "1",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q10",
+      "category": "2",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q10",
+      "category": "3",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q10",
+      "category": "4",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q10",
+      "category": "5",
+      "n": 13,
+      "percent": 54.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q11",
+      "category": "Com conteúdo",
+      "n": 11,
+      "percent": 45.8,
+      "denominator": 24,
+      "missing": 13,
+      "multiple": false
+    },
+    {
+      "variable": "Q11",
+      "category": "Sem conteúdo temático",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 13,
+      "multiple": false
+    },
+    {
+      "variable": "Q11",
+      "category": "Ausente",
+      "n": 13,
+      "percent": 54.2,
+      "denominator": 24,
+      "missing": 13,
+      "multiple": false
+    },
+    {
+      "variable": "Q12",
+      "category": "Sim",
+      "n": 12,
+      "percent": 50.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q12",
+      "category": "Não",
+      "n": 12,
+      "percent": 50.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13a",
+      "category": "Nada útil",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13a",
+      "category": "Pouco útil",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13a",
+      "category": "Moderadamente útil",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13a",
+      "category": "Muito útil",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13a",
+      "category": "Extremamente útil",
+      "n": 11,
+      "percent": 45.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13b",
+      "category": "Nada útil",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13b",
+      "category": "Pouco útil",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13b",
+      "category": "Moderadamente útil",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13b",
+      "category": "Muito útil",
+      "n": 10,
+      "percent": 41.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13b",
+      "category": "Extremamente útil",
+      "n": 10,
+      "percent": 41.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13c",
+      "category": "Nada útil",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13c",
+      "category": "Pouco útil",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13c",
+      "category": "Moderadamente útil",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13c",
+      "category": "Muito útil",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13c",
+      "category": "Extremamente útil",
+      "n": 10,
+      "percent": 41.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13d",
+      "category": "Nada útil",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13d",
+      "category": "Pouco útil",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13d",
+      "category": "Moderadamente útil",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13d",
+      "category": "Muito útil",
+      "n": 5,
+      "percent": 20.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13d",
+      "category": "Extremamente útil",
+      "n": 12,
+      "percent": 50.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13e",
+      "category": "Nada útil",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13e",
+      "category": "Pouco útil",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13e",
+      "category": "Moderadamente útil",
+      "n": 2,
+      "percent": 8.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13e",
+      "category": "Muito útil",
+      "n": 7,
+      "percent": 29.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q13e",
+      "category": "Extremamente útil",
+      "n": 12,
+      "percent": 50.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q14",
+      "category": "Gestão de perfil de startup (dados do negócio, sector, estágio)",
+      "n": 23,
+      "percent": 95.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q14",
+      "category": "Gestão de rondas de investimento (valores, condições, milestones)",
+      "n": 13,
+      "percent": 54.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q14",
+      "category": "Data room com controlo de acessos",
+      "n": 11,
+      "percent": 45.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q14",
+      "category": "Registo de contactos e reuniões com investidores",
+      "n": 14,
+      "percent": 58.3,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q14",
+      "category": "Registo de soft commits e estado das negociações",
+      "n": 13,
+      "percent": 54.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q14",
+      "category": "Painéis de indicadores (tempo, taxa de conversão, volume de soft commits)",
+      "n": 17,
+      "percent": 70.8,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q14",
+      "category": "Integração com ferramentas de assinatura electrónica (para term sheets)",
+      "n": 13,
+      "percent": 54.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": true
+    },
+    {
+      "variable": "Q15",
+      "category": "1",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q15",
+      "category": "2",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q15",
+      "category": "3",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q15",
+      "category": "4",
+      "n": 6,
+      "percent": 25.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q15",
+      "category": "5",
+      "n": 15,
+      "percent": 62.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q16",
+      "category": "Sem interesse",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q16",
+      "category": "Pouco interesse",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q16",
+      "category": "Algum interesse",
+      "n": 3,
+      "percent": 12.5,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q16",
+      "category": "Muito interesse",
+      "n": 10,
+      "percent": 41.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q16",
+      "category": "Interesse máximo",
+      "n": 10,
+      "percent": 41.7,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q17",
+      "category": "Com conteúdo",
+      "n": 24,
+      "percent": 100.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q17",
+      "category": "Sem conteúdo temático",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q17",
+      "category": "Ausente",
+      "n": 0,
+      "percent": 0.0,
+      "denominator": 24,
+      "missing": 0,
+      "multiple": false
+    },
+    {
+      "variable": "Q18",
+      "category": "Com conteúdo",
+      "n": 8,
+      "percent": 33.3,
+      "denominator": 24,
+      "missing": 12,
+      "multiple": false
+    },
+    {
+      "variable": "Q18",
+      "category": "Sem conteúdo temático",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 12,
+      "multiple": false
+    },
+    {
+      "variable": "Q18",
+      "category": "Ausente",
+      "n": 12,
+      "percent": 50.0,
+      "denominator": 24,
+      "missing": 12,
+      "multiple": false
+    },
+    {
+      "variable": "Q19",
+      "category": "Sim",
+      "n": 22,
+      "percent": 91.7,
+      "denominator": 24,
+      "missing": 1,
+      "multiple": false
+    },
+    {
+      "variable": "Q19",
+      "category": "Não",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 1,
+      "multiple": false
+    },
+    {
+      "variable": "Q19",
+      "category": "Ausente",
+      "n": 1,
+      "percent": 4.2,
+      "denominator": 24,
+      "missing": 1,
+      "multiple": false
+    },
+    {
+      "variable": "Q20",
+      "category": "Preenchido",
+      "n": 20,
+      "percent": 83.3,
+      "denominator": 24,
+      "missing": 4,
+      "multiple": false
+    },
+    {
+      "variable": "Q20",
+      "category": "Ausente",
+      "n": 4,
+      "percent": 16.7,
+      "denominator": 24,
+      "missing": 4,
+      "multiple": false
+    }
+  ],
+  "qualitative": [
+    {
+      "question": "Q11",
+      "code": "P1",
+      "theme": "Atrasos ou dificuldade de converter interesse em compromisso",
+      "n_records": 3,
+      "pct_all": 12.5,
+      "base_all": 24,
+      "pct_content": 27.3,
+      "base_content": 11,
+      "coding_rule_regex_normalized": "demor|tempos de decis|tempo de negoc|transformar o interesse|converter o interesse"
+    },
+    {
+      "question": "Q11",
+      "code": "P2",
+      "theme": "Burocracia e garantias",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 9.1,
+      "base_content": 11,
+      "coding_rule_regex_normalized": "burocracia|garantias"
+    },
+    {
+      "question": "Q11",
+      "code": "P3",
+      "theme": "Comunicação, proposta de valor ou ausência de resposta",
+      "n_records": 2,
+      "pct_all": 8.3,
+      "base_all": 24,
+      "pct_content": 18.2,
+      "base_content": 11,
+      "coding_rule_regex_normalized": "falta de resposta|comunicacao da proposta"
+    },
+    {
+      "question": "Q11",
+      "code": "P4",
+      "theme": "Acesso a rede de investidores",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 9.1,
+      "base_content": 11,
+      "coding_rule_regex_normalized": "rede de investidores"
+    },
+    {
+      "question": "Q11",
+      "code": "P5",
+      "theme": "Demonstração de crescimento e métricas",
+      "n_records": 3,
+      "pct_all": 12.5,
+      "base_all": 24,
+      "pct_content": 27.3,
+      "base_content": 11,
+      "coding_rule_regex_normalized": "crescimento sustentavel|metricas"
+    },
+    {
+      "question": "Q11",
+      "code": "P6",
+      "theme": "Ausência de fundos ou promessa não concretizada",
+      "n_records": 2,
+      "pct_all": 8.3,
+      "base_all": 24,
+      "pct_content": 18.2,
+      "base_content": 11,
+      "coding_rule_regex_normalized": "nunca recebi|prometem"
+    },
+    {
+      "question": "Q11",
+      "code": "P7",
+      "theme": "Relação com investidores sem detalhe interpretável",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 9.1,
+      "base_content": 11,
+      "coding_rule_regex_normalized": "mao que da"
+    },
+    {
+      "question": "Q17",
+      "code": "C1",
+      "theme": "Segurança",
+      "n_records": 20,
+      "pct_all": 83.3,
+      "base_all": 24,
+      "pct_content": 83.3,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "segur|encript"
+    },
+    {
+      "question": "Q17",
+      "code": "C2",
+      "theme": "Privacidade",
+      "n_records": 9,
+      "pct_all": 37.5,
+      "base_all": 24,
+      "pct_content": 37.5,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "privacidade"
+    },
+    {
+      "question": "Q17",
+      "code": "C3",
+      "theme": "Facilidade de uso e experiência",
+      "n_records": 9,
+      "pct_all": 37.5,
+      "base_all": 24,
+      "pct_content": 37.5,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "facil|intuitiv|experiencia do utilizador"
+    },
+    {
+      "question": "Q17",
+      "code": "C4",
+      "theme": "Legalidade e proteção de participações",
+      "n_records": 7,
+      "pct_all": 29.2,
+      "base_all": 24,
+      "pct_content": 29.2,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "compliance|participacoes|legais|legias|legalidade|conformidade com a lei"
+    },
+    {
+      "question": "Q17",
+      "code": "C5",
+      "theme": "Transparência, rastreabilidade e fidelidade dos dados",
+      "n_records": 3,
+      "pct_all": 12.5,
+      "base_all": 24,
+      "pct_content": 12.5,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "transparencia|rastreabilidade|dados fieis"
+    },
+    {
+      "question": "Q17",
+      "code": "C6",
+      "theme": "Suporte e continuidade",
+      "n_records": 2,
+      "pct_all": 8.3,
+      "base_all": 24,
+      "pct_content": 8.3,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "suporte|continuidade"
+    },
+    {
+      "question": "Q17",
+      "code": "C7",
+      "theme": "Operações financeiras sugeridas fora do âmbito",
+      "n_records": 3,
+      "pct_all": 12.5,
+      "base_all": 24,
+      "pct_content": 12.5,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "pagamento|transferencia|desembols|transacoes financeiras"
+    },
+    {
+      "question": "Q17",
+      "code": "C8",
+      "theme": "Colaboração entre fundadores",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 4.2,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "colaboracao"
+    },
+    {
+      "question": "Q17",
+      "code": "C9",
+      "theme": "Eficiência",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 4.2,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "eficiencia"
+    },
+    {
+      "question": "Q17",
+      "code": "C10",
+      "theme": "Acessibilidade",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 4.2,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "acessibilidade"
+    },
+    {
+      "question": "Q17",
+      "code": "C11",
+      "theme": "Certificações de segurança",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 4.2,
+      "base_content": 24,
+      "coding_rule_regex_normalized": "certificacoes"
+    },
+    {
+      "question": "Q18",
+      "code": "F1",
+      "theme": "Apoio ou expectativa favorável",
+      "n_records": 7,
+      "pct_all": 29.2,
+      "base_all": 24,
+      "pct_content": 87.5,
+      "base_content": 8,
+      "coding_rule_regex_normalized": "interessante|ideia muito bom|impulsionador|ajudara|funcional|escelentissima|nao parem"
+    },
+    {
+      "question": "Q18",
+      "code": "F2",
+      "theme": "Estratégia de captação",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 12.5,
+      "base_content": 8,
+      "coding_rule_regex_normalized": "estrategia"
+    },
+    {
+      "question": "Q18",
+      "code": "F3",
+      "theme": "Acessibilidade, transparência e segurança",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 12.5,
+      "base_content": 8,
+      "coding_rule_regex_normalized": "acessivel|transparente|segura"
+    },
+    {
+      "question": "Q18",
+      "code": "F4",
+      "theme": "Educação e networking",
+      "n_records": 1,
+      "pct_all": 4.2,
+      "base_all": 24,
+      "pct_content": 12.5,
+      "base_content": 8,
+      "coding_rule_regex_normalized": "educacao|networking"
+    }
+  ],
+  "subgroups": [
+    {
+      "profile": "Fundador(a) ou membro de startup acelerada",
+      "n": 17,
+      "unstructured_or_weak_Q06": 13,
+      "high_interest_Q16": 15
+    },
+    {
+      "profile": "Representante de aceleradora/incubadora",
+      "n": 2,
+      "unstructured_or_weak_Q06": 1,
+      "high_interest_Q16": 1
+    },
+    {
+      "profile": "Investidor(a) (angel, venture capital, corporate venture)",
+      "n": 3,
+      "unstructured_or_weak_Q06": 2,
+      "high_interest_Q16": 2
+    },
+    {
+      "profile": "Outra",
+      "n": 2,
+      "unstructured_or_weak_Q06": 2,
+      "high_interest_Q16": 2
+    }
+  ]
+}

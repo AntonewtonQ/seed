@@ -1,0 +1,142 @@
+variable,category,n,percent,denominator,missing,multiple
+Q01,"Sim, aceito participar.",24,100.0,24,0,False
+Q01,Não aceito participar.,0,0.0,24,0,False
+Q02,Fundador(a) ou membro de startup acelerada,17,70.8,24,0,False
+Q02,Representante de aceleradora/incubadora,2,8.3,24,0,False
+Q02,"Investidor(a) (angel, venture capital, corporate venture)",3,12.5,24,0,False
+Q02,Outra,2,8.3,24,0,False
+Q03,Menos de 1 ano,11,45.8,24,0,False
+Q03,De 1 a 3 anos,11,45.8,24,0,False
+Q03,De 4 a 6 anos,1,4.2,24,0,False
+Q03,Mais de 6 anos,1,4.2,24,0,False
+Q04,Angola,23,95.8,24,0,False
+Q04,"Angola, Portugal",1,4.2,24,0,False
+Q05,Luanda,20,83.3,24,0,False
+Q05,Luanda e Bengo.,1,4.2,24,0,False
+Q05,Luanda e Icolo e Bengo,1,4.2,24,0,False
+Q05,"Luanda, Viana",1,4.2,24,0,False
+Q05,Malanje,1,4.2,24,0,False
+Q06,"Sim, existe um processo bem estruturado.",5,20.8,24,0,False
+Q06,"Existe um processo, mas pouco estruturado.",10,41.7,24,0,False
+Q06,Não existe um processo claramente definido.,8,33.3,24,0,False
+Q06,Não sei / Não se aplica.,1,4.2,24,0,False
+Q07,E-mail,12,50.0,24,0,True
+Q07,Ficheiros Excel/folhas de cálculo,12,50.0,24,0,True
+Q07,"Documentos partilhados (Google Drive, OneDrive, etc.)",8,33.3,24,0,True
+Q07,"Ferramentas genéricas de gestão de projecto (Trello, Asana, etc.)",4,16.7,24,0,True
+Q07,Plataforma específica para gestão de investimento,8,33.3,24,0,True
+Q07,Nunca fiz isso,1,4.2,24,0,True
+Q07,"Participação em eventos de Startup, feiras",1,4.2,24,0,True
+Q08a,Discordo totalmente,7,29.2,24,0,False
+Q08a,Discordo,9,37.5,24,0,False
+Q08a,Nem concordo nem discordo,5,20.8,24,0,False
+Q08a,Concordo,2,8.3,24,0,False
+Q08a,Concordo totalmente,1,4.2,24,0,False
+Q08b,Discordo totalmente,3,12.5,24,0,False
+Q08b,Discordo,11,45.8,24,0,False
+Q08b,Nem concordo nem discordo,5,20.8,24,0,False
+Q08b,Concordo,4,16.7,24,0,False
+Q08b,Concordo totalmente,1,4.2,24,0,False
+Q08c,Discordo totalmente,3,12.5,24,0,False
+Q08c,Discordo,5,20.8,24,0,False
+Q08c,Nem concordo nem discordo,7,29.2,24,0,False
+Q08c,Concordo,9,37.5,24,0,False
+Q08c,Concordo totalmente,0,0.0,24,0,False
+Q08d,Discordo totalmente,3,12.5,24,0,False
+Q08d,Discordo,8,33.3,24,0,False
+Q08d,Nem concordo nem discordo,10,41.7,24,0,False
+Q08d,Concordo,3,12.5,24,0,False
+Q08d,Concordo totalmente,0,0.0,24,0,False
+Q08e,Discordo totalmente,6,25.0,24,0,False
+Q08e,Discordo,2,8.3,24,0,False
+Q08e,Nem concordo nem discordo,3,12.5,24,0,False
+Q08e,Concordo,5,20.8,24,0,False
+Q08e,Concordo totalmente,8,33.3,24,0,False
+Q09a,Nunca,3,12.5,24,0,False
+Q09a,Raramente,4,16.7,24,0,False
+Q09a,Às vezes,7,29.2,24,0,False
+Q09a,Frequentemente,4,16.7,24,0,False
+Q09a,Quase sempre,6,25.0,24,0,False
+Q09b,Nunca,1,4.2,24,0,False
+Q09b,Raramente,4,16.7,24,0,False
+Q09b,Às vezes,6,25.0,24,0,False
+Q09b,Frequentemente,8,33.3,24,0,False
+Q09b,Quase sempre,5,20.8,24,0,False
+Q09c,Nunca,3,12.5,24,0,False
+Q09c,Raramente,2,8.3,24,0,False
+Q09c,Às vezes,6,25.0,24,0,False
+Q09c,Frequentemente,7,29.2,24,0,False
+Q09c,Quase sempre,6,25.0,24,0,False
+Q09d,Nunca,4,16.7,24,0,False
+Q09d,Raramente,4,16.7,24,0,False
+Q09d,Às vezes,4,16.7,24,0,False
+Q09d,Frequentemente,8,33.3,24,0,False
+Q09d,Quase sempre,4,16.7,24,0,False
+Q09e,Nunca,5,20.8,24,0,False
+Q09e,Raramente,3,12.5,24,0,False
+Q09e,Às vezes,2,8.3,24,0,False
+Q09e,Frequentemente,6,25.0,24,0,False
+Q09e,Quase sempre,8,33.3,24,0,False
+Q10,1,1,4.2,24,0,False
+Q10,2,1,4.2,24,0,False
+Q10,3,3,12.5,24,0,False
+Q10,4,6,25.0,24,0,False
+Q10,5,13,54.2,24,0,False
+Q11,Com conteúdo,11,45.8,24,13,False
+Q11,Sem conteúdo temático,0,0.0,24,13,False
+Q11,Ausente,13,54.2,24,13,False
+Q12,Sim,12,50.0,24,0,False
+Q12,Não,12,50.0,24,0,False
+Q13a,Nada útil,1,4.2,24,0,False
+Q13a,Pouco útil,0,0.0,24,0,False
+Q13a,Moderadamente útil,4,16.7,24,0,False
+Q13a,Muito útil,8,33.3,24,0,False
+Q13a,Extremamente útil,11,45.8,24,0,False
+Q13b,Nada útil,0,0.0,24,0,False
+Q13b,Pouco útil,2,8.3,24,0,False
+Q13b,Moderadamente útil,2,8.3,24,0,False
+Q13b,Muito útil,10,41.7,24,0,False
+Q13b,Extremamente útil,10,41.7,24,0,False
+Q13c,Nada útil,0,0.0,24,0,False
+Q13c,Pouco útil,1,4.2,24,0,False
+Q13c,Moderadamente útil,5,20.8,24,0,False
+Q13c,Muito útil,8,33.3,24,0,False
+Q13c,Extremamente útil,10,41.7,24,0,False
+Q13d,Nada útil,0,0.0,24,0,False
+Q13d,Pouco útil,1,4.2,24,0,False
+Q13d,Moderadamente útil,6,25.0,24,0,False
+Q13d,Muito útil,5,20.8,24,0,False
+Q13d,Extremamente útil,12,50.0,24,0,False
+Q13e,Nada útil,2,8.3,24,0,False
+Q13e,Pouco útil,1,4.2,24,0,False
+Q13e,Moderadamente útil,2,8.3,24,0,False
+Q13e,Muito útil,7,29.2,24,0,False
+Q13e,Extremamente útil,12,50.0,24,0,False
+Q14,"Gestão de perfil de startup (dados do negócio, sector, estágio)",23,95.8,24,0,True
+Q14,"Gestão de rondas de investimento (valores, condições, milestones)",13,54.2,24,0,True
+Q14,Data room com controlo de acessos,11,45.8,24,0,True
+Q14,Registo de contactos e reuniões com investidores,14,58.3,24,0,True
+Q14,Registo de soft commits e estado das negociações,13,54.2,24,0,True
+Q14,"Painéis de indicadores (tempo, taxa de conversão, volume de soft commits)",17,70.8,24,0,True
+Q14,Integração com ferramentas de assinatura electrónica (para term sheets),13,54.2,24,0,True
+Q15,1,0,0.0,24,0,False
+Q15,2,0,0.0,24,0,False
+Q15,3,3,12.5,24,0,False
+Q15,4,6,25.0,24,0,False
+Q15,5,15,62.5,24,0,False
+Q16,Sem interesse,1,4.2,24,0,False
+Q16,Pouco interesse,0,0.0,24,0,False
+Q16,Algum interesse,3,12.5,24,0,False
+Q16,Muito interesse,10,41.7,24,0,False
+Q16,Interesse máximo,10,41.7,24,0,False
+Q17,Com conteúdo,24,100.0,24,0,False
+Q17,Sem conteúdo temático,0,0.0,24,0,False
+Q17,Ausente,0,0.0,24,0,False
+Q18,Com conteúdo,8,33.3,24,12,False
+Q18,Sem conteúdo temático,4,16.7,24,12,False
+Q18,Ausente,12,50.0,24,12,False
+Q19,Sim,22,91.7,24,1,False
+Q19,Não,1,4.2,24,1,False
+Q19,Ausente,1,4.2,24,1,False
+Q20,Preenchido,20,83.3,24,4,False
+Q20,Ausente,4,16.7,24,4,False

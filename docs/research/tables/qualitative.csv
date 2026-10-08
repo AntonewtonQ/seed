@@ -1,0 +1,23 @@
+question,code,theme,n_records,pct_all,base_all,pct_content,base_content,coding_rule_regex_normalized
+Q11,P1,Atrasos ou dificuldade de converter interesse em compromisso,3,12.5,24,27.3,11,demor|tempos de decis|tempo de negoc|transformar o interesse|converter o interesse
+Q11,P2,Burocracia e garantias,1,4.2,24,9.1,11,burocracia|garantias
+Q11,P3,"Comunicação, proposta de valor ou ausência de resposta",2,8.3,24,18.2,11,falta de resposta|comunicacao da proposta
+Q11,P4,Acesso a rede de investidores,1,4.2,24,9.1,11,rede de investidores
+Q11,P5,Demonstração de crescimento e métricas,3,12.5,24,27.3,11,crescimento sustentavel|metricas
+Q11,P6,Ausência de fundos ou promessa não concretizada,2,8.3,24,18.2,11,nunca recebi|prometem
+Q11,P7,Relação com investidores sem detalhe interpretável,1,4.2,24,9.1,11,mao que da
+Q17,C1,Segurança,20,83.3,24,83.3,24,segur|encript
+Q17,C2,Privacidade,9,37.5,24,37.5,24,privacidade
+Q17,C3,Facilidade de uso e experiência,9,37.5,24,37.5,24,facil|intuitiv|experiencia do utilizador
+Q17,C4,Legalidade e proteção de participações,7,29.2,24,29.2,24,compliance|participacoes|legais|legias|legalidade|conformidade com a lei
+Q17,C5,"Transparência, rastreabilidade e fidelidade dos dados",3,12.5,24,12.5,24,transparencia|rastreabilidade|dados fieis
+Q17,C6,Suporte e continuidade,2,8.3,24,8.3,24,suporte|continuidade
+Q17,C7,Operações financeiras sugeridas fora do âmbito,3,12.5,24,12.5,24,pagamento|transferencia|desembols|transacoes financeiras
+Q17,C8,Colaboração entre fundadores,1,4.2,24,4.2,24,colaboracao
+Q17,C9,Eficiência,1,4.2,24,4.2,24,eficiencia
+Q17,C10,Acessibilidade,1,4.2,24,4.2,24,acessibilidade
+Q17,C11,Certificações de segurança,1,4.2,24,4.2,24,certificacoes
+Q18,F1,Apoio ou expectativa favorável,7,29.2,24,87.5,8,interessante|ideia muito bom|impulsionador|ajudara|funcional|escelentissima|nao parem
+Q18,F2,Estratégia de captação,1,4.2,24,12.5,8,estrategia
+Q18,F3,"Acessibilidade, transparência e segurança",1,4.2,24,12.5,8,acessivel|transparente|segura
+Q18,F4,Educação e networking,1,4.2,24,12.5,8,educacao|networking

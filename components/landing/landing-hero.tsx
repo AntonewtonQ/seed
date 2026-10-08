@@ -29,7 +29,7 @@ export function LandingHero() {
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/[0.08] px-3 py-1 text-xs font-extrabold uppercase tracking-normal text-[color:var(--seed-gold-soft)]">
             <ShieldCheck aria-hidden="true" className="size-4" />
-            Capital inteligente com processos seguros
+            Protótipo académico · captação pós-aceleração
           </p>
 
           <h1 className="mt-7 text-6xl font-extrabold leading-none tracking-normal text-white md:text-8xl">
@@ -40,13 +40,13 @@ export function LandingHero() {
           </p>
           <p className="mt-5 max-w-2xl text-base font-medium leading-7 text-[color:var(--seed-tint)] md:text-lg">
             Organizamos o percurso entre startups, aceleradoras e investidores
-            com informação estruturada, acesso controlado e due diligence
-            preparada para decisões de capital.
+            com rondas, negociações, interações e documentos autorizados.
+            O protótipo organiza o processo; não recebe nem transfere fundos.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Button asChild size="lg" variant="secondary">
-              <Link href="/signup">
+              <Link href="/login">
                 Preparar startup
                 <ArrowRight aria-hidden="true" />
               </Link>
@@ -57,7 +57,7 @@ export function LandingHero() {
               size="lg"
               variant="outline"
             >
-              <Link href="/signup">Avaliar oportunidades</Link>
+              <Link href="/login">Avaliar oportunidades</Link>
             </Button>
           </div>
         </div>

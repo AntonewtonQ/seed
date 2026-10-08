@@ -1,0 +1,16 @@
+# Evolução futura do SEED — prioridades fundamentadas
+
+Decisões propostas em 08-10-2026; não implementadas. N = 24 registos consentidos de um grupo heterogéneo, sem representatividade demonstrada. Frequências não são votos vinculativos nem prova de eficácia.
+
+| Prioridade | Evidência e interpretação | Proposta e critério de avaliação futuro | Limite |
+|---|---|---|---|
+| P0 | Q16: interesse elevado 20/24; Q13: utilidade elevada de etapas 20/24 | Observar tarefas com representantes dos três papéis: criar ronda, atualizar etapa, distinguir intenção/term sheet/dinheiro, autorizar/revogar e interpretar denominadores. Registar sucesso, erros e compreensão com consentimento. | Ainda não houve avaliação de usabilidade do protótipo. Não prometer adoção. |
+| P0 | Q17: segurança 20/24, privacidade 9/24; Q09d: dificuldade frequente/quase sempre 12/24 | Rever política de retenção, recuperação de acesso, gestão de membros, TLS e avaliação de ficheiros antes de uso real. Manter testes de autorização por recurso. | Controlos locais não são certificação; requisitos legais precisam de análise própria. |
+| P1 | Q09b/c: dificuldades de etapas/registos 13/24 cada; Q13c: utilidade elevada 18/24 | Avaliar histórico completo de alterações de intenção/condições e próximos passos com responsáveis e prazos; testar compreensão da cronologia. | Registo manual atual não captura toda revisão nem envia lembretes. |
+| P1 | Q09e: dificuldade frequente/quase sempre de indicadores 14/24; Q14 painéis 17/24 | Testar rótulos, origem temporal e denominadores; avaliar filtros por período e eventos que realmente se pretende medir. | Dias desde abertura da ronda não equivalem a dias desde demo day; nunca chamar intenção de volume captado. |
+| P1 | Q14 perfil 23/24 e rondas 13/24 | Confirmar com utilizadores necessidade de estágio, condições e milestones antes de acrescentar campos. | A opção do questionário é mais ampla que os campos atuais; seleção múltipla não estabelece prioridade exclusiva. |
+| P2 | Q14 assinatura eletrónica 13/24 | Estudar custo, integração, privacidade e significado jurídico; prototipar apenas se justificado depois da avaliação de uso. | Não implementada; upload e estado aceite não comprovam assinatura. |
+| P2 | Q11: rede de investidores em 1/24; Q17 colaboração em 1/24; Q18 educação/networking em 1/24 | Explorar necessidade em entrevistas, incluindo opinião minoritária, antes de propor diretório, colaboração ou materiais de apoio. | Uma menção não sustenta novo módulo ou matching automático. |
+| Fora do âmbito | Q11: atrasos, garantias, promessas e ausência de fundos; Q17: possíveis operações financeiras em 3/24 | Explicitar limites e distinguir estados no produto; encaminhar investigação de causas para estudo próprio. | SEED não cria capital, decide investimentos, processa pagamentos, compra participações ou garante desembolsos. |
+
+Para investigação futura: documentar seleção e recrutamento, diversificar perfis/localidades com desenho explícito, separar contactos do questionário e rever perguntas com benefício sugerido, exemplos indutores e ausência de “não se aplica”. Uma eventual reaplicação deve ser identificada como nova versão; não alterar o instrumento histórico. Um estudo longitudinal/comparativo com critérios próprios é necessário antes de atribuir melhoria do processo ao sistema.

@@ -1,0 +1,32 @@
+{
+  "analysis_date": "2026-10-08",
+  "xlsx_sha256": "3c8f305cd34208a2dff593c1ec233e11214257c6d909fcaf6641617e99c555b2",
+  "sheets": [
+    {
+      "sheet": "Respostas do Formulário 1",
+      "state": "visible",
+      "physical_rows": 25,
+      "nonempty_rows": 25,
+      "columns": 33,
+      "formula_cells": 0
+    }
+  ],
+  "exported_submissions": 24,
+  "consent_yes": 24,
+  "included_records": 24,
+  "excluded_records": 0,
+  "unique_participants": "Não verificável: ausência de identificador autenticado; contactos distintos não comprovam pessoas distintas",
+  "contact_present": 20,
+  "distinct_contact_strings": 20,
+  "contact_without_yes": 0,
+  "exact_duplicate_excess": 0,
+  "duplicate_answer_patterns_excluding_time_contact": 0,
+  "first_observed": "2026-02-05 14:42:21.797000",
+  "last_observed": "2026-02-10 08:36:36.288000",
+  "timezone": "Não indicado na exportação; não convertido",
+  "reference_screenshot_count": 24,
+  "reference_count_matches": true,
+  "screenshots_available": false,
+  "pdf_pages": 240,
+  "pdf_individual_blocks": 24
+}

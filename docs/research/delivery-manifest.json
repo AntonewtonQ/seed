@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-08",
+  "outputs": [
+    {
+      "file": "docs/report/tcc_antonewton.docx",
+      "sha256": "3d4233f43d8d37f5b3015325863cd237756d09ab2564ba295c34066e7d030b10",
+      "bytes": 2513490
+    },
+    {
+      "file": "docs/report/tcc_antonewton.pdf",
+      "sha256": "85b6c58760cc267572afa8add6c89fa021244313abadb098d72676cb16fc7182",
+      "bytes": 1478738
+    },
+    {
+      "file": "docs/traceability.csv",
+      "sha256": "83e0316c82f0feaa83b1ca52d2b02729b8f412f3c162dbff1224494cb84f6c55",
+      "bytes": 8032
+    },
+    {
+      "file": "docs/research/tables/subgroups.csv",
+      "sha256": "b28df2f0bd9d6e42b3fed782790992eb0700ee333858132dadf6df140237fbee",
+      "bytes": 234
+    },
+    {
+      "file": "docs/research/tables/frequencies.csv",
+      "sha256": "7a517c6735c23d32e9df8f3a41553fdd1696dddd757d8abb1201ea0be31e790b",
+      "bytes": 5927
+    },
+    {
+      "file": "docs/research/tables/qualitative.csv",
+      "sha256": "908a3492638063df1f376e84ef0c2a77ea9691e8f20a332b7ab168613e74850a",
+      "bytes": 2109
+    },
+    {
+      "file": "docs/research/tables/missingness.csv",
+      "sha256": "56bd8a785cdecfb499f9e3d99e8fda73830a3d3c0cdadebd94b66e27de727249",
+      "bytes": 484
+    },
+    {
+      "file": "docs/research/figures/difficulties.svg",
+      "sha256": "96ed907aed534284c178e39b14d979c169b14e0aafef54685667da45f582cc98",
+      "bytes": 51267
+    },
+    {
+      "file": "docs/research/figures/difficulties.png",
+      "sha256": "b219de589e725b62eeced0bcdea8f94fd95026c1ce84f44381fafc0ff96569dc",
+      "bytes": 78253
+    },
+    {
+      "file": "docs/research/figures/utility.png",
+      "sha256": "c0e934785cdcd1a18d428c3cb1bf279762b8f5704bf60b06b0dff874496c30d9",
+      "bytes": 75577
+    },
+    {
+      "file": "docs/research/figures/utility.svg",
+      "sha256": "b225be4356f98bb4939de0b9cd62c0114800c0572afb5292a4f086d46b167468",
+      "bytes": 50894
+    },
+    {
+      "file": "docs/research/figures/features.svg",
+      "sha256": "2c562091ec281828adcc9fe216e389f95556667efcc949728dfcf6db92d5a57b",
+      "bytes": 51168
+    },
+    {
+      "file": "docs/research/figures/features.png",
+      "sha256": "b6aa16bca571a202096a68e56ca4e6592b6e4528696db44718bc62388d0bbe72",
+      "bytes": 92646
+    }
+  ]
+}

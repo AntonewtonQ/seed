@@ -1,44 +1,4 @@
-import type { Metadata } from "next"
-
-import { AuthCard } from "@/components/auth/auth-card"
-import { SignupForm } from "@/components/auth/signup-form"
-
-export const metadata: Metadata = {
-  title: "Criar conta | SEED",
-  description:
-    "Solicite acesso à SEED para preparar startups, avaliar oportunidades e gerir processos de investimento.",
-}
-
-type SignupPageProps = {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
-}
-
-function getStatusMessage(status: string | string[] | undefined) {
-  if (status === "incomplete") {
-    return "Preencha os campos obrigatórios e confirme o pedido de contacto."
-  }
-
-  if (status === "preview") {
-    return "Pedido recebido para demonstração. A criação real de contas será ligada ao backend de autenticação."
-  }
-
-  return undefined
-}
-
-export default async function SignupPage({ searchParams }: SignupPageProps) {
-  const { status } = await searchParams
-
-  return (
-    <AuthCard
-      description="Solicite acesso para preparar uma startup, avaliar oportunidades ou acompanhar um programa de aceleração."
-      eyebrow="Criar acesso"
-      statusMessage={getStatusMessage(status)}
-      switchAction="Entrar"
-      switchHref="/login"
-      switchText="Já tem conta?"
-      title="Crie a sua conta SEED"
-    >
-      <SignupForm />
-    </AuthCard>
-  )
-}
+import Link from 'next/link';
+import {AuthCard} from '@/components/auth/auth-card';
+export const metadata={title:'Contas de demonstração | SEED'};
+export default function Page(){return <AuthCard title="Acesso à demonstração" eyebrow="SEED local" description="Esta versão académica utiliza contas fictícias previamente preparadas." switchAction="Entrar" switchHref="/login" switchText="Já tem as credenciais?"><p>As contas de startup, investidor e aceleradora estão descritas no README do projeto. As palavras-passe são geradas localmente durante a preparação da demonstração.</p><p className="mt-4 text-sm text-muted-foreground">Não existe registo público ou envio de pedidos de acesso nesta versão.</p><Link href="/" className="mt-5 inline-block underline">Voltar ao início</Link></AuthCard>}

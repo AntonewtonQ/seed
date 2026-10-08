@@ -1,0 +1,5 @@
+import {readFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const origin='http://localhost:3000';const credentials=JSON.parse(await readFile('.local/demo-credentials.json'));const proof=JSON.parse(await readFile('.local/persistence-proof.json'));
+const r=await fetch(origin+'/api/capture/login',{method:'POST',headers:{origin,'Content-Type':'application/json'},body:JSON.stringify({email:'fundador@demo.seed.local',password:credentials['fundador@demo.seed.local']})});assert.equal(r.status,200);const cookie=r.headers.get('set-cookie').split(';')[0];
+const state=await (await fetch(origin+'/api/capture',{headers:{cookie}})).json();assert(state.rounds.some(r=>r.id===proof.roundId));assert(state.opportunities.some(p=>p.id===proof.opportunityId&&p.stage==='term_sheet'));const d=await fetch(origin+'/api/capture/document/'+proof.documentId,{headers:{cookie}});assert.equal(await d.text(),'Persistência verificada após reinício.');console.log('PASS: ronda, negociação, estado e bytes do documento persistem.');

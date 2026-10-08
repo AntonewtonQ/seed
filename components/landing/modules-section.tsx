@@ -9,7 +9,7 @@ export function ModulesSection() {
           align="center"
           description="Cada módulo responde a uma etapa do processo de captação: preparar, avaliar, proteger e decidir."
           eyebrow="Módulos"
-          title="Tudo o que sustenta uma negociação de investimento."
+          title="Um fluxo para organizar a captação."
         />
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">

@@ -1,4 +1,3 @@
-import Link from "next/link"
 import { LockKeyhole, Mail } from "lucide-react"
 
 import { loginPreviewAction } from "@/lib/auth-actions"
@@ -29,23 +28,6 @@ export function LoginForm() {
         required
         type="password"
       />
-
-      <div className="flex flex-col gap-3 text-sm font-semibold text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
-        <label className="inline-flex items-center gap-2">
-          <input
-            className="size-4 accent-[color:var(--seed-petroleum)]"
-            name="remember"
-            type="checkbox"
-          />
-          Manter sessão iniciada
-        </label>
-        <Link
-          className="font-extrabold text-[color:var(--seed-petroleum)] underline-offset-4 hover:underline"
-          href="/login"
-        >
-          Recuperar acesso
-        </Link>
-      </div>
 
       <AuthSubmitButton>Entrar na plataforma</AuthSubmitButton>
     </form>

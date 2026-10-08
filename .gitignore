@@ -43,3 +43,8 @@ next-env.d.ts
 # local agent files
 AGENTS.md
 CLAUDE.md
+!.env.example
+/.local/
+/.tools-venv/
+/test-results/
+/playwright-report/

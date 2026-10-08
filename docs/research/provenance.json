@@ -1,0 +1,102 @@
+{
+  "analysis_date": "2026-10-08",
+  "source_delivery": "Ficheiros locais indicados pelo autor; originais preservados em área privada ignorada pelo Git.",
+  "sources": [
+    {
+      "file": "tcc_antonewton.docx",
+      "role": "relatório antes desta revisão",
+      "sha256": "7607295d3e81211b7fac0539c916c15f16fbe4b2be5feb0976586b30db9d8873",
+      "bytes": 2296558
+    },
+    {
+      "file": "tcc_antonewton.pdf",
+      "role": "relatório antes desta revisão",
+      "sha256": "575f6917d09c12e1a717ce11d082b48589908120d898a8cd90aec8f8c658b1c4",
+      "bytes": 983228
+    },
+    {
+      "file": "Plataforma de Captação de Fundos para Startups Aceleradas em Angola (Respostas).xlsx",
+      "role": "original recuperado",
+      "sha256": "3c8f305cd34208a2dff593c1ec233e11214257c6d909fcaf6641617e99c555b2",
+      "bytes": 16034
+    },
+    {
+      "file": "Plataforma de Captação de Fundos para Startups Aceleradas em Angola - Google Forms.pdf",
+      "role": "original recuperado",
+      "sha256": "7ec6fb5aed5dba5a7f0d52a829287d9cd76ab599bec4fbddfbc8512ec5631980",
+      "bytes": 6455349
+    },
+    {
+      "file": "AGENTS.md",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "e3447d84251880fb34cfae09131cb4c57471529bbfe60976a3245793cf621627",
+      "bytes": 327
+    },
+    {
+      "file": "README.md",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "faddec0c5127627b5b6c98cdd940abb2fa03b3c9d5b02be345149e6cadc87911",
+      "bytes": 11543
+    },
+    {
+      "file": "docs/architecture.md",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "fa055f2620f2d4cff45806516be8564beb8fd6ad6a1f80cbf7118e288203a9cf",
+      "bytes": 11183
+    },
+    {
+      "file": "docs/verification/results.md",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "1b2a5a69982498f7c77362bbcfcbf9615bc45998e5f20d153946797298bf14ea",
+      "bytes": 6297
+    },
+    {
+      "file": "docs/verification/ui-review.md",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "f0b4354587852b3d00d45b1d7e8a15f64d271cad4bb44f92aa4aa921f9a6930d",
+      "bytes": 4019
+    },
+    {
+      "file": "docs/report/revision-notes.md",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "fd336fedfddb4fc5efb7bc62b7903cd822caf559168f3ae505d4847c880926b6",
+      "bytes": 7173
+    },
+    {
+      "file": "lib/server/capture.ts",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "71e3265f5f1bde5078023b602a83e1de0be3e98072ca7e416fa9e135292c48d7",
+      "bytes": 14594
+    },
+    {
+      "file": "lib/server/auth.ts",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "1d220d84583cdc65aec37a96095706185ec559cc1cb0a19e9a61ffc067d6dbfb",
+      "bytes": 2860
+    },
+    {
+      "file": "db/migrations/001_core.sql",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "39240be5416e574b4d155a4f31f79b6fa7e4e6a8b0c17b50bd99adacd91baf2b",
+      "bytes": 4437
+    },
+    {
+      "file": "db/migrations/002_integrity.sql",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "73619f1175e31485f242937cba1598b327597948fffdd2d1a843f99349b8db4d",
+      "bytes": 1490
+    },
+    {
+      "file": "tests/capture.spec.ts",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "dc493ed4882b2d64d10d009788daa10648b87a98c4be8fe7d926f9cd17ae8f6a",
+      "bytes": 7273
+    },
+    {
+      "file": "tests/workspace-ui.spec.ts",
+      "role": "fonte de contexto/implementação consultada",
+      "sha256": "486c2f574ab9cd6620624d0d4d3718ec48588d65c4b667735a9e246db93e7b14",
+      "bytes": 11397
+    }
+  ]
+}

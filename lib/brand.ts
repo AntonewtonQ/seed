@@ -1,7 +1,7 @@
 export const seedBrand = {
   name: "SEED",
   tagline: "A ponte segura entre startups aceleradas e capital inteligente.",
-  domain: "seed.ao",
+  domain: "Demonstração académica local",
   colors: [
     {
       name: "Petroleum Green",
@@ -34,5 +34,5 @@ export const seedBrand = {
       value: "#F7F2E3",
     },
   ],
-  modules: ["Data Room", "Investor Pipeline", "Due Diligence"],
+  modules: ["Data Room", "Investor Pipeline", "Interações"],
 } as const

@@ -18,9 +18,10 @@ function getStatusMessage(status: string | string[] | undefined) {
     return "Preencha o email e a palavra-passe para continuar."
   }
 
-  if (status === "preview") {
-    return "Fluxo de entrada validado. A ligação à autenticação real será implementada na etapa de backend."
-  }
+  if (status === "invalid") return "Email ou palavra-passe incorretos.";
+  if (status === "limited") return "Demasiadas tentativas. Aguarde 15 minutos.";
+  if (status === "unavailable") return "Serviço temporariamente indisponível. Tente novamente.";
+  if (status === "provisioned") return "As contas desta demonstração são provisionadas pelo comando npm run db:seed. Consulte o README.";
 
   return undefined
 }
@@ -33,9 +34,9 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
       description="Aceda à sua área para acompanhar oportunidades, documentos partilhados e decisões em curso."
       eyebrow="Bem-vindo de volta"
       statusMessage={getStatusMessage(status)}
-      switchAction="Criar conta"
+      switchAction="Sobre as contas de demonstração"
       switchHref="/signup"
-      switchText="Ainda não tem acesso?"
+      switchText="Demonstração local."
       title="Entre na sua conta SEED"
     >
       <LoginForm />

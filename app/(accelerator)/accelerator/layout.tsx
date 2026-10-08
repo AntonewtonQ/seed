@@ -1,9 +1,2 @@
-import { AcceleratorShell } from "@/components/accelerator/accelerator-shell"
-
-export default function AcceleratorLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
-  return <AcceleratorShell>{children}</AcceleratorShell>
-}
+import { redirect } from "next/navigation";
+export default function Layout(){ redirect("/workspace") }
