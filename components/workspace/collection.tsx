@@ -60,7 +60,16 @@ export function Collection({
       ) : (
         <Empty
           title="Nenhum resultado"
-          description="Experimente outro nome ou limpe a pesquisa."
+          description={`Nada corresponde a “${query}”.`}
+          action={
+            <button
+              type="button"
+              className="ws-button ws-secondary"
+              onClick={() => setQuery("")}
+            >
+              Limpar pesquisa
+            </button>
+          }
         />
       )}
       {total > 1 && (

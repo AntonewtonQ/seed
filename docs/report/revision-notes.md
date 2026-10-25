@@ -1,5 +1,22 @@
 # Revisão académica — atualização de 8 de outubro de 2026
 
+## Pendente para o relatório — revisão da interface de 25 de outubro de 2026
+
+O DOCX e o PDF **não foram alterados**. A aplicação passou por uma revisão de identidade e comunicação ([guia](../design/identity.md), [evidências](../verification/ui-review.md)). Passagens do PDF atual (72 páginas) que deixam de descrever o estado da aplicação:
+
+| Local no PDF | Texto atual | Proposta |
+|---|---|---|
+| 4.1 Visão geral da plataforma (página impressa 25; p. 26 do PDF) | "A identidade visual foi preservada. Nesta fase documental, a aplicação e a base de dados não foram alteradas nem se repetiram testes que criam registos." | "Em 25 de outubro de 2026, a identidade visual foi simplificada (superfícies neutras, um acento, tipografia única, novo símbolo) e a comunicação das telas foi revista: trilho de localização, indicação do resultado de cada formulário, aviso de consulta para investidores e aceleradoras e explicação das etapas. Não houve alteração do esquema, das permissões ou da API. Os testes automatizados foram repetidos e criaram registos fictícios na base de demonstração." |
+| 5.8 Procedimentos de teste (página impressa 44; p. 45 do PDF) | "Não foram repetidos testes que modificam dados nesta revisão documental." | Acrescentar: "Em 25 de outubro de 2026, os quatro cenários foram repetidos com aprovação, em conjunto com verificações axe nas páginas públicas e numa verificação complementar da área autenticada (53 itens, desktop e telemóvel): estados vazios, erro devolvido pelo servidor, teclado e indisponibilidade da base." |
+| Tabela de resultados técnicos (página impressa 45; p. 46 do PDF), linha "Interface e acessibilidade" | "Passou no cenário verificado" | Manter e referir a data de 25 de outubro de 2026 e `docs/verification/ui-review.md` |
+| Capítulo 6 / limitações | — | Registar que a nova comunicação **não** foi avaliada com participantes; a prioridade P0 de `docs/research/recommendations.md` continua por cumprir |
+
+Cuidados ao integrar:
+- Não descrever a revisão visual como resultado da pesquisa. Apenas a explicação de etapas e de denominadores se relaciona com a recomendação P1 (ver "Relação com a pesquisa" no guia).
+- Se forem incluídas capturas no relatório, usar as de `docs/verification/` desta data e indicar que os dados são fictícios.
+- As figuras atuais do relatório (arquitetura, entidades, sequência e acessos) são diagramas e não precisam de alteração.
+
+
 O DOCX principal e a versão PDF foram revistos a partir dos ficheiros recuperados. A indisponibilidade de respostas registada em 7 de outubro foi resolvida. A secção histórica abaixo descreve a revisão anterior; as suas limitações sobre dados indisponíveis e comandos de regeneração **não representam o estado atual**.
 
 ## Alterações desta revisão

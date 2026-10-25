@@ -14,7 +14,12 @@ type Value = {
   busy: boolean;
   notice: { message: string; error: boolean; path: string } | null;
   dismiss: () => void;
-  run: (action: string, payload: unknown, to?: Destination) => Promise<boolean>;
+  run: (
+    action: string,
+    payload: unknown,
+    to?: Destination,
+    message?: string,
+  ) => Promise<boolean>;
   refresh: () => Promise<void>;
 };
 const Context = createContext<Value | null>(null);
@@ -41,7 +46,12 @@ export function WorkspaceProvider({
     if (!r.ok) throw new Error(body.error);
     setData(body);
   }
-  async function run(action: string, payload: unknown, to?: Destination) {
+  async function run(
+    action: string,
+    payload: unknown,
+    to?: Destination,
+    message = "Alteração guardada.",
+  ) {
     if (working.current) return false;
     working.current = true;
     setBusy(true);
@@ -68,7 +78,7 @@ export function WorkspaceProvider({
       await refresh();
       const next = typeof to === "function" ? to(result) : to;
       setNotice({
-        message: "Alteração guardada.",
+        message,
         error: false,
         path: next ?? path,
       });

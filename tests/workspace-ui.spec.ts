@@ -9,11 +9,11 @@ test.beforeAll(async () => {
 });
 async function login(page: Page, email: string) {
   await page.goto("/login");
-  await page.getByLabel("Email profissional").fill(email);
+  await page.getByLabel("Email", { exact: true }).fill(email);
   await page
     .getByLabel("Palavra-passe", { exact: true })
     .fill(credentials[email]);
-  await page.getByRole("button", { name: "Entrar na plataforma" }).click();
+  await page.getByRole("button", { name: "Entrar", exact: true }).click();
   await expect(page).toHaveURL(/\/workspace$/);
 }
 async function accessible(page: Page) {
@@ -83,10 +83,10 @@ test("Startup: fluxo completo em páginas dedicadas, com contexto e persistênci
     .getByRole("link", { name: "Registar interação", exact: true })
     .click();
   await page
-    .getByLabel("Data e hora (fuso do dispositivo)")
+    .getByLabel("Data e hora", { exact: true })
     .fill("2026-10-01T10:00");
   await page
-    .getByLabel("Registo da interação")
+    .getByLabel("Descrição", { exact: true })
     .fill("Reunião fictícia para validar a interface por tarefa.");
   await page
     .getByRole("button", { name: "Registar interação", exact: true })
@@ -115,7 +115,7 @@ test("Startup: fluxo completo em páginas dedicadas, com contexto e persistênci
   await expect(page).toHaveURL(opportunityURL);
   await page.reload();
   await expect(page.getByText("Soft commit", { exact: true })).toBeVisible();
-  await page.getByRole("link", { name: "Histórico de etapas" }).click();
+  await page.getByRole("link", { name: "Histórico", exact: true }).click();
   await expect(
     page.getByRole("heading", { name: "Reunião → Soft commit" }),
   ).toBeVisible();
@@ -209,6 +209,10 @@ test("Startup: fluxo completo em páginas dedicadas, com contexto e persistênci
   await accessible(page);
   await page.getByRole("link", { name: "Cancelar", exact: true }).click();
   await expect(page).toHaveURL(/\/profile$/);
+  await expect(page.locator("main form")).toHaveCount(0);
+  await expect(
+    page.getByRole("heading", { name: "Meu perfil", exact: true }),
+  ).toBeVisible();
   await page.keyboard.press("Tab");
   expect(await page.evaluate(() => document.activeElement?.tagName)).not.toBe(
     "BODY",

@@ -1,5 +1,3 @@
-import { ArrowRight } from "lucide-react"
-
 import { Button } from "@/components/ui/button"
 
 type AuthSubmitButtonProps = {
@@ -8,9 +6,8 @@ type AuthSubmitButtonProps = {
 
 export function AuthSubmitButton({ children }: AuthSubmitButtonProps) {
   return (
-    <Button className="h-11 w-full text-sm font-extrabold" size="lg" type="submit">
+    <Button className="h-10 w-full" size="lg" type="submit">
       {children}
-      <ArrowRight aria-hidden="true" />
     </Button>
   )
 }

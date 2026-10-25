@@ -6,7 +6,7 @@ import { LoginForm } from "@/components/auth/login-form"
 export const metadata: Metadata = {
   title: "Entrar | SEED",
   description:
-    "Entre na plataforma SEED para acompanhar pipeline, data rooms e processos de due diligence.",
+    "Entrar na demonstração local do SEED.",
 }
 
 type LoginPageProps = {
@@ -21,7 +21,7 @@ function getStatusMessage(status: string | string[] | undefined) {
   if (status === "invalid") return "Email ou palavra-passe incorretos.";
   if (status === "limited") return "Demasiadas tentativas. Aguarde 15 minutos.";
   if (status === "unavailable") return "Serviço temporariamente indisponível. Tente novamente.";
-  if (status === "provisioned") return "As contas desta demonstração são provisionadas pelo comando npm run db:seed. Consulte o README.";
+  if (status === "provisioned") return "As contas são criadas pelo comando npm run db:seed. Consulte o README.";
 
   return undefined
 }
@@ -31,13 +31,12 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
 
   return (
     <AuthCard
-      description="Aceda à sua área para acompanhar oportunidades, documentos partilhados e decisões em curso."
-      eyebrow="Bem-vindo de volta"
+      description="Use uma das contas de demonstração."
       statusMessage={getStatusMessage(status)}
-      switchAction="Sobre as contas de demonstração"
+      switchAction="Onde encontrar as contas"
       switchHref="/signup"
-      switchText="Demonstração local."
-      title="Entre na sua conta SEED"
+      switchText="Não tem acesso?"
+      title="Entrar"
     >
       <LoginForm />
     </AuthCard>

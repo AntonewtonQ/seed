@@ -1,6 +1,4 @@
 import Link from "next/link"
-import { Building2, LockKeyhole, Mail, UserRound } from "lucide-react"
-
 import { signupPreviewAction } from "@/lib/auth-actions"
 
 import { AuthField } from "./auth-field"
@@ -49,7 +47,6 @@ export function SignupForm() {
 
       <AuthField
         autoComplete="name"
-        icon={UserRound}
         id="signup-name"
         label="Nome completo"
         name="name"
@@ -59,7 +56,6 @@ export function SignupForm() {
       />
       <AuthField
         autoComplete="organization"
-        icon={Building2}
         id="signup-organization"
         label="Organização"
         name="organization"
@@ -69,7 +65,6 @@ export function SignupForm() {
       />
       <AuthField
         autoComplete="email"
-        icon={Mail}
         id="signup-email"
         label="Email profissional"
         name="email"
@@ -80,7 +75,6 @@ export function SignupForm() {
       <AuthField
         autoComplete="new-password"
         hint="Mínimo 8 caracteres"
-        icon={LockKeyhole}
         id="signup-password"
         label="Palavra-passe"
         minLength={8}

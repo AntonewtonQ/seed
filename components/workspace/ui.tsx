@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, FolderOpen } from "lucide-react";
-import { useState, type ReactNode, type FormEvent } from "react";
+import { ArrowLeft, ArrowRight, Eye, FolderOpen } from "lucide-react";
+import { useId, useState, type ReactNode, type FormEvent } from "react";
 import { useWorkspace, type Destination } from "./context";
 export const stages: Record<string, string> = {
   contacted: "Contactado",
@@ -26,31 +26,48 @@ export const stamp = (value: string | Date) =>
   });
 export const money = (value: string, currency: string) =>
   `${Number(value).toLocaleString("pt-PT", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} ${currency}`;
+export type Crumb = { href: string; label: string };
+// trail: níveis acima da página atual, do mais geral para o mais próximo.
+// Em telemóvel, só o nível imediatamente acima fica visível, como "voltar".
 export function PageHeading({
   title,
   description,
-  back,
+  trail = [],
   action,
 }: {
   title: string;
-  description?: string;
-  back?: { href: string; label: string };
+  description?: ReactNode;
+  trail?: Crumb[];
   action?: ReactNode;
 }) {
   return (
     <>
-      <nav aria-label="Regressar" className="ws-back">
-        {back && (
-          <Link href={back.href}>
-            <ArrowLeft size={16} aria-hidden />
-            {back.label}
-          </Link>
+      <nav aria-label="Localização" className="ws-back">
+        {trail.length > 0 && (
+          <ol>
+            {trail.map((c, i) => (
+              <li
+                key={c.href}
+                className={i === trail.length - 1 ? "ws-crumb-parent" : undefined}
+              >
+                <Link href={c.href}>
+                  {i === trail.length - 1 && (
+                    <ArrowLeft size={16} aria-hidden className="ws-crumb-icon" />
+                  )}
+                  {c.label}
+                </Link>
+              </li>
+            ))}
+            <li className="ws-crumb-current" aria-current="page">
+              {title}
+            </li>
+          </ol>
         )}
       </nav>
       <header className="ws-heading">
         <div>
           <h1>{title}</h1>
-          {description && <p>{description}</p>}
+          {description && <div className="ws-heading-description">{description}</div>}
         </div>
         {action}
       </header>
@@ -61,18 +78,32 @@ export function ActionLink({
   href,
   children,
   secondary = false,
+  danger = false,
 }: {
   href: string;
   children: ReactNode;
   secondary?: boolean;
+  danger?: boolean;
 }) {
   return (
     <Link
-      className={secondary ? "ws-button ws-secondary" : "ws-button"}
+      className={
+        "ws-button" +
+        (danger ? " ws-danger-outline" : secondary ? " ws-secondary" : "")
+      }
       href={href}
     >
       {children}
     </Link>
+  );
+}
+// Indica aos perfis sem escrita que a ausência de ações é intencional.
+export function ReadOnlyNote({ children }: { children: ReactNode }) {
+  return (
+    <p className="ws-readonly">
+      <Eye size={16} aria-hidden />
+      <span>{children}</span>
+    </p>
   );
 }
 export function Empty({
@@ -98,7 +129,8 @@ export function NotAvailable() {
     <>
       <PageHeading title="Página indisponível" />
       <Empty
-        title="Este recurso não está disponível para a sua conta."
+        title="Esta página não está disponível para a sua conta."
+        description="Pode não existir ou não estar partilhada com a sua organização."
         action={<ActionLink href="/workspace">Voltar ao painel</ActionLink>}
       />
     </>
@@ -111,6 +143,7 @@ export function Field({
   value = "",
   required = true,
   maxLength = 160,
+  hint,
 }: {
   label: string;
   name: string;
@@ -118,11 +151,15 @@ export function Field({
   value?: string;
   required?: boolean;
   maxLength?: number;
+  hint?: string;
 }) {
+  const id = useId();
+  const hintId = id + "-hint";
   return (
-    <label className="ws-field">
-      {label}
+    <div className="ws-field">
+      <label htmlFor={id}>{label}</label>
       <input
+        id={id}
         name={name}
         type={type}
         defaultValue={value}
@@ -130,8 +167,14 @@ export function Field({
         maxLength={maxLength}
         step={type === "number" ? "0.01" : undefined}
         min={type === "number" ? "0.01" : undefined}
+        aria-describedby={hint ? hintId : undefined}
       />
-    </label>
+      {hint && (
+        <span id={hintId} className="ws-hint">
+          {hint}
+        </span>
+      )}
+    </div>
   );
 }
 export function Textarea({
@@ -165,19 +208,34 @@ export function Select({
   name,
   value,
   children,
+  hint,
 }: {
   label: string;
   name: string;
   value?: string;
   children: ReactNode;
+  hint?: string;
 }) {
+  const id = useId();
+  const hintId = id + "-hint";
   return (
-    <label className="ws-field">
-      {label}
-      <select name={name} defaultValue={value} required>
+    <div className="ws-field">
+      <label htmlFor={id}>{label}</label>
+      <select
+        id={id}
+        name={name}
+        defaultValue={value}
+        required
+        aria-describedby={hint ? hintId : undefined}
+      >
         {children}
       </select>
-    </label>
+      {hint && (
+        <span id={hintId} className="ws-hint">
+          {hint}
+        </span>
+      )}
+    </div>
   );
 }
 export function ActionForm({
@@ -189,6 +247,8 @@ export function ActionForm({
   label,
   children,
   multipart = false,
+  next,
+  success,
 }: {
   action: string;
   extra?: Record<string, unknown>;
@@ -198,6 +258,10 @@ export function ActionForm({
   label: string;
   children: ReactNode;
   multipart?: boolean;
+  /** O que acontece depois de guardar, mostrado junto da ação principal. */
+  next?: string;
+  /** Mensagem mostrada no destino depois de guardar. */
+  success?: string;
 }) {
   const { run, busy } = useWorkspace();
   const [error, setError] = useState("");
@@ -211,6 +275,7 @@ export function ActionForm({
         action,
         multipart ? fd : transform ? transform(values) : values,
         to,
+        success,
       );
     } catch {
       setError("Verifique os campos antes de continuar.");
@@ -219,12 +284,17 @@ export function ActionForm({
   return (
     <form onSubmit={submit} className="ws-form ws-panel">
       {children}
-      {error && <p role="alert">{error}</p>}
+      {error && (
+        <p role="alert" className="ws-field-error">
+          {error}
+        </p>
+      )}
       <div className="ws-form-actions">
+        {next && <p className="ws-note ws-form-next">{next}</p>}
         <button className="ws-button" disabled={busy}>
           {busy ? "A guardar…" : label}
         </button>
-        <Link href={cancel} className="ws-text-link">
+        <Link href={cancel} className="ws-button ws-secondary">
           Cancelar
         </Link>
       </div>

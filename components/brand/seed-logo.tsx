@@ -21,22 +21,21 @@ export function SeedLogo({
     <div
       className={cn(
         "flex items-center gap-3",
-        compact ? "gap-2" : "gap-3",
+        compact ? "gap-2" : "gap-2.5",
         className
       )}
     >
       <SeedMark
-        className={compact ? "size-8" : "size-11"}
+        className={compact ? "size-6" : "size-8"}
         tone={tone}
         title="Logotipo SEED"
       />
       <div className="min-w-0">
         <div
           className={cn(
-            "text-3xl font-extrabold leading-none tracking-normal",
-            isLight
-              ? "text-[color:var(--seed-cream)]"
-              : "text-[color:var(--seed-petroleum)]"
+            "font-semibold leading-none tracking-tight",
+            compact ? "text-lg" : "text-2xl",
+            isLight ? "text-white" : "text-foreground"
           )}
         >
           SEED
@@ -44,13 +43,11 @@ export function SeedLogo({
         {showTagline ? (
           <p
             className={cn(
-              "mt-1 max-w-52 text-[0.68rem] font-medium leading-4",
-              isLight
-                ? "text-[color:var(--seed-tint)]"
-                : "text-[color:var(--muted-foreground)]"
+              "mt-1 max-w-52 text-xs leading-4",
+              isLight ? "text-white/80" : "text-muted-foreground"
             )}
           >
-            A ponte segura entre startups aceleradas e capital inteligente.
+            Acompanhamento da captação pós-aceleração.
           </p>
         ) : null}
       </div>

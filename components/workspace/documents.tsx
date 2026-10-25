@@ -8,6 +8,7 @@ import {
   Select,
   Empty,
   NotAvailable,
+  ReadOnlyNote,
   Badge,
   stamp,
 } from "./ui";
@@ -20,8 +21,8 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
       <>
         <PageHeading
           title="Anexar documento"
-          description="O documento fica privado até conceder acesso."
-          back={{ href: "/workspace/documents", label: "Documentos" }}
+          description="Fica privado até conceder acesso."
+          trail={[{ href: "/workspace/documents", label: "Documentos" }]}
         />
         <ActionForm
           action="upload"
@@ -29,15 +30,23 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
           to={(r) => "/workspace/documents/" + r.id}
           cancel="/workspace/documents"
           label="Anexar documento"
+          next="Depois de anexar, escolha quem pode descarregar o documento."
+          success="Documento anexado. Está privado até conceder acesso."
         >
-          <label className="ws-field">
-            Ficheiro
-            <input type="file" name="file" accept=".pdf,.txt" required />
-          </label>
-          <p className="ws-note">
-            PDF ou texto UTF-8, até 2 MiB. Utilize documentos fictícios nesta
-            demonstração.
-          </p>
+          <div className="ws-field">
+            <label htmlFor="upload-file">Ficheiro</label>
+            <input
+              id="upload-file"
+              type="file"
+              name="file"
+              accept=".pdf,.txt"
+              required
+              aria-describedby="upload-hint"
+            />
+            <span id="upload-hint" className="ws-hint">
+              PDF ou TXT (UTF-8), até 2 MiB. Use apenas documentos fictícios.
+            </span>
+          </div>
         </ActionForm>
       </>
     );
@@ -49,8 +58,8 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
           title="Documentos"
           description={
             owned
-              ? "Organize o data room e escolha quem pode aceder a cada ficheiro."
-              : "Consulte os documentos explicitamente partilhados com a sua organização."
+              ? "Guarde documentos e escolha quem os pode ver."
+              : "Documentos partilhados com a sua organização."
           }
           action={
             owned ? (
@@ -77,12 +86,20 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
             ),
           }))}
           empty={
-            owned ? "O data room está vazio" : "Sem documentos partilhados"
+            owned ? "Ainda não há documentos" : "Sem documentos partilhados"
           }
+          action={
+            owned ? (
+              <ActionLink href="/workspace/documents/new">
+                Anexar documento
+              </ActionLink>
+            ) : undefined
+          }
+          search="Pesquisar documentos"
           description={
             owned
-              ? "Anexe o primeiro documento da sua startup."
-              : "Os documentos aparecem aqui depois de a startup autorizar a sua organização."
+              ? "Anexe o primeiro documento."
+              : "Aparecem aqui quando uma startup lhe der acesso."
           }
         />
       </>
@@ -90,6 +107,8 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
   const d = data.documents.find((d) => d.id === id);
   if (!d) return <NotAvailable />;
   const base = "/workspace/documents/" + id;
+  const listCrumb = { href: "/workspace/documents", label: "Documentos" };
+  const recordCrumb = { href: base, label: d.name };
   if (mode === "access") {
     if (!d.owned) return <NotAvailable />;
     const s = data.startups.find((s) => s.id === d.startup_id);
@@ -109,7 +128,7 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
         <PageHeading
           title="Gerir acessos"
           description={d.name}
-          back={{ href: base, label: "Documento" }}
+          trail={[listCrumb, recordCrumb]}
         />
         <div className="ws-panel mb-6">
           <h2>Organizações com acesso</h2>
@@ -128,11 +147,16 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
                     className="ws-text-link"
                     disabled={busy}
                     onClick={() =>
-                      void run("grant", {
-                        documentId: id,
-                        organizationId: g.organization_id,
-                        allow: false,
-                      })
+                      void run(
+                        "grant",
+                        {
+                          documentId: id,
+                          organizationId: g.organization_id,
+                          allow: false,
+                        },
+                        undefined,
+                        "Acesso revogado.",
+                      )
                     }
                   >
                     Revogar acesso
@@ -155,6 +179,8 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
             to={base + "/access"}
             cancel={base}
             label="Conceder acesso"
+            next="A organização escolhida passa a poder descarregar o documento."
+            success="Acesso concedido."
           >
             <Select label="Organização" name="organizationId">
               {recipients
@@ -166,14 +192,14 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
                 ))}
             </Select>
             <p className="ws-note">
-              A autorização permite novas descargas. A revogação não remove
-              cópias já descarregadas.
+              Revogar impede novas descargas, mas não apaga cópias já
+              descarregadas.
             </p>
           </ActionForm>
         ) : !recipients.length ? (
           <Empty
             title="Sem destinatários associados"
-            description="Associe um investidor a uma ronda antes de lhe conceder acesso."
+            description="Associe primeiro um investidor a uma ronda."
             action={
               <ActionLink href="/workspace/opportunities/new">
                 Associar investidor
@@ -190,20 +216,33 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
       <>
         <PageHeading
           title="Eliminar documento"
-          back={{ href: base, label: "Documento" }}
+          trail={[listCrumb, recordCrumb]}
         />
         <div className="ws-panel ws-form">
           <h2>{d.name}</h2>
           <p>
-            O ficheiro e as respetivas autorizações serão eliminados. Esta ação
-            não pode ser desfeita.
+            O ficheiro e os acessos concedidos serão eliminados. Esta ação não
+            pode ser desfeita.
+          </p>
+          <p className="ws-note">
+            {(() => {
+              const n = data.grants.filter((g) => g.document_id === id).length;
+              return n
+                ? `${n} ${n === 1 ? "organização deixa" : "organizações deixam"} de poder descarregar este documento.`
+                : "Nenhuma organização tem acesso a este documento.";
+            })()}
           </p>
           <div className="ws-form-actions">
             <button
               disabled={busy}
               className="ws-button ws-danger"
               onClick={() =>
-                void run("deleteDocument", { id }, "/workspace/documents")
+                void run(
+                  "deleteDocument",
+                  { id },
+                  "/workspace/documents",
+                  "Documento eliminado.",
+                )
               }
             >
               Eliminar documento
@@ -221,13 +260,18 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
     <>
       <PageHeading
         title={d.name}
-        back={{ href: "/workspace/documents", label: "Documentos" }}
+        trail={[listCrumb]}
         action={
           <a className="ws-button" href={"/api/capture/document/" + id}>
-            Descarregar documento
+            Descarregar
           </a>
         }
       />
+      {!d.owned && (
+        <ReadOnlyNote>
+          Partilhado pela startup. Pode descarregar, mas não alterar.
+        </ReadOnlyNote>
+      )}
       <div className="ws-panel">
         <dl className="ws-record ws-record-grid">
           <div>
@@ -249,7 +293,7 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
               {d.owned
                 ? data.grants.some((g) => g.document_id === id)
                   ? "Partilhado com organizações autorizadas"
-                  : "Privado — apenas a sua startup"
+                  : "Privado"
                 : "Autorizado para a sua organização"}
             </dd>
           </div>
@@ -259,7 +303,7 @@ export function DocumentsScreen({ id, mode }: { id?: string; mode?: string }) {
             <ActionLink href={base + "/access"} secondary>
               Gerir acessos
             </ActionLink>
-            <ActionLink href={base + "/delete"} secondary>
+            <ActionLink href={base + "/delete"} danger>
               Eliminar documento
             </ActionLink>
           </div>

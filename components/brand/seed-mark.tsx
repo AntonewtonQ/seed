@@ -6,47 +6,35 @@ type SeedMarkProps = {
   tone?: "default" | "light"
 }
 
+// Rebento num quadrado arredondado; mesma geometria de public/brand/seed-symbol.svg.
 export function SeedMark({
   className,
   title = "SEED",
   tone = "default",
 }: SeedMarkProps) {
   const isLight = tone === "light"
-  const leftStroke = isLight ? "var(--seed-tint)" : "var(--seed-petroleum)"
-  const rightStroke = "var(--seed-gold)"
-  const arrowFill = isLight ? "var(--seed-cream)" : "var(--seed-petroleum)"
-  const dotFill = isLight ? "var(--seed-cream)" : "var(--seed-petroleum)"
+  const surface = isLight ? "#ffffff" : "var(--brand)"
+  const sprout = isLight ? "var(--brand)" : "#ffffff"
 
   return (
     <svg
       aria-label={title}
-      className={cn("block size-10", className)}
+      className={cn("block size-8", className)}
       role="img"
-      viewBox="0 0 100 100"
+      viewBox="0 0 32 32"
       xmlns="http://www.w3.org/2000/svg"
     >
       <title>{title}</title>
-      <circle cx="50" cy="13" fill={dotFill} r="10" />
+      <rect fill={surface} height="32" rx="8" width="32" />
       <path
-        d="M38 24 18 36v30l20 12"
+        d="M16 25V15"
         fill="none"
-        stroke={leftStroke}
+        stroke={sprout}
         strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="10"
+        strokeWidth="2.5"
       />
-      <path
-        d="M62 24 82 36v30L62 78"
-        fill="none"
-        stroke={rightStroke}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="10"
-      />
-      <path
-        d="M50 35 31 55h11v27h16V55h11L50 35Z"
-        fill={arrowFill}
-      />
+      <path d="M16 18.5C16 13.5 12.5 11 8 11c0 4.6 3 7.5 8 7.5Z" fill={sprout} />
+      <path d="M16 15.5C16 10.5 19.5 7 24 7c0 5-3 8.5-8 8.5Z" fill={sprout} />
     </svg>
   )
 }

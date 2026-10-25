@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 32" role="img" aria-labelledby="seed-wordmark-title">
+  <title id="seed-wordmark-title">SEED</title>
+  <rect width="32" height="32" rx="8" fill="#0F3D3E"/>
+  <path d="M16 25V15" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16 18.5C16 13.5 12.5 11 8 11c0 4.6 3 7.5 8 7.5Z" fill="#FFFFFF"/>
+  <path d="M16 15.5C16 10.5 19.5 7 24 7c0 5-3 8.5-8 8.5Z" fill="#FFFFFF"/>
+  <text x="42" y="23" fill="#18181B" font-family="Inter, system-ui, sans-serif" font-size="20" font-weight="600" letter-spacing="-0.4">SEED</text>
+</svg>

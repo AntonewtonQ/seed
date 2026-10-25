@@ -3,32 +3,29 @@ import { SectionHeading } from "./section-heading"
 
 export function ProcessSection() {
   return (
-    <section className="bg-card px-4 py-20 sm:px-6 lg:px-8" id="processo">
-      <div className="mx-auto max-w-7xl">
+    <section
+      className="border-y border-border bg-card py-20"
+      id="como-funciona"
+    >
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          description="Um percurso objetivo para transformar informação dispersa em oportunidades prontas para análise."
-          eyebrow="Processo"
-          title="Da preparação da startup à decisão de investimento."
+          description="A demonstração usa contas e dados fictícios."
+          title="Como funciona"
         />
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-4">
+        <ol className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {processSteps.map((step, index) => (
-            <article
-              className="rounded-lg border border-border bg-background p-6"
-              key={step.title}
-            >
-              <span className="flex size-10 items-center justify-center rounded-lg bg-[color:var(--seed-petroleum)] text-sm font-extrabold text-[color:var(--seed-cream)]">
-                {String(index + 1).padStart(2, "0")}
+            <li className="border-t border-border pt-5" key={step.title}>
+              <span className="text-sm text-muted-foreground">
+                {index + 1}
               </span>
-              <h3 className="mt-5 text-lg font-extrabold tracking-normal text-[color:var(--seed-petroleum)]">
-                {step.title}
-              </h3>
-              <p className="mt-3 text-sm font-medium leading-6 text-muted-foreground">
+              <h3 className="mt-2 font-semibold">{step.title}</h3>
+              <p className="mt-2 text-sm leading-6 text-muted-foreground">
                 {step.text}
               </p>
-            </article>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   )

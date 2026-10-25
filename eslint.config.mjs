@@ -12,6 +12,9 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Local tooling and private data, ignored by Git.
+    ".tools-venv/**",
+    ".local/**",
   ]),
 ]);
 

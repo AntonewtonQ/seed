@@ -9,7 +9,7 @@ export function MetricsScreen({ id }: { id?: string }) {
       <>
         <PageHeading
           title="Indicadores"
-          description="Escolha uma ronda para consultar os seus resultados de acompanhamento."
+          description="Escolha uma ronda."
         />
         <Collection
           items={data.rounds.map((r) => ({
@@ -20,6 +20,7 @@ export function MetricsScreen({ id }: { id?: string }) {
             meta: <Badge>{r.currency}</Badge>,
           }))}
           empty="Ainda não há rondas para analisar"
+          search="Pesquisar rondas"
         />
       </>
     );
@@ -31,7 +32,7 @@ export function MetricsScreen({ id }: { id?: string }) {
       <PageHeading
         title="Indicadores da ronda"
         description={r.name}
-        back={{ href: "/workspace/metrics", label: "Indicadores" }}
+        trail={[{ href: "/workspace/metrics", label: "Indicadores" }]}
       />
       <dl className="ws-stats">
         <Stat label="Negociações" value={m.opportunities} />
@@ -42,7 +43,11 @@ export function MetricsScreen({ id }: { id?: string }) {
               ? "Não calculável"
               : m.conversion.toFixed(1) + "%"
           }
-          detail={`${m.numerator} de ${m.denominator} negociações com reunião`}
+          detail={
+            m.denominator
+              ? `${m.numerator} de ${m.denominator} negociações com reunião`
+              : "Nenhuma negociação chegou a reunião."
+          }
         />
         <Stat
           label="Dias até ao primeiro soft commit"
@@ -51,15 +56,20 @@ export function MetricsScreen({ id }: { id?: string }) {
               ? "Não calculável"
               : m.daysToFirstCommit.toFixed(2)
           }
+          detail={
+            m.daysToFirstCommit === null
+              ? "Ainda não há soft commit nesta ronda."
+              : "Contados desde a abertura da ronda."
+          }
         />
       </dl>
       <p className="ws-note">
-        Período: {stamp(r.created_at)} até à consulta. Apenas relações
-        autorizadas para a sua conta.
+        Desde {stamp(r.created_at)} até hoje. Inclui apenas as negociações
+        que a sua conta pode ver.
       </p>
       <details className="ws-panel mt-6">
         <summary className="cursor-pointer font-semibold">
-          Como são calculados estes indicadores?
+          Como são calculados?
         </summary>
         <div className="ws-note mt-4 space-y-3">
           <p>
@@ -76,8 +86,8 @@ export function MetricsScreen({ id }: { id?: string }) {
             a etapa.
           </p>
           <p>
-            Estes indicadores acompanham o processo. Não medem dinheiro recebido
-            nem eficácia da captação.
+            Estes indicadores descrevem o processo. Não medem dinheiro recebido
+            nem o sucesso da captação.
           </p>
         </div>
       </details>

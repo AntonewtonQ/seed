@@ -122,11 +122,11 @@ Depois do login, `/workspace` apresenta um painel operacional adequado à conta.
 
 | Perfil | Página inicial | Secções do menu |
 |---|---|---|
-| Startup | Rondas abertas e próximos passos | Meu perfil, Rondas, Negociações, Documentos, Indicadores |
+| Startup | Próximos passos, começando pelas negociações sem próximo passo | Meu perfil, Rondas, Negociações, Documentos, Indicadores |
 | Investidor | Oportunidades associadas à sua organização | Oportunidades, Documentos |
 | Aceleradora | Startups vinculadas e acompanhamento | Startups, Rondas, Negociações, Documentos, Indicadores |
 
-Os painéis apresentam três contagens e até quatro registos. As listas têm pesquisa e paginação de oito registos; o detalhe da negociação separa resumo, interações e histórico. Em telemóvel, o botão **Menu** abre a navegação. Ações indisponíveis para o papel não são apresentadas; a autorização continua a ser aplicada no servidor. Evidências da revisão: [interface por tarefa](docs/verification/ui-review.md).
+Os painéis apresentam até três contagens e até quatro registos. Cada tela interna tem um trilho de localização (em telemóvel, o nível acima) e cada formulário indica o que acontece depois de guardar. Investidores e aceleradoras veem um aviso de que só consultam. As listas têm pesquisa e paginação de oito registos; o detalhe da negociação separa resumo, interações e histórico. Em telemóvel, o botão **Menu** abre a navegação. Ações indisponíveis para o papel não são apresentadas; a autorização continua a ser aplicada no servidor. Evidências da revisão: [interface por tarefa](docs/verification/ui-review.md). Identidade, componentes e regras de escrita: [guia de identidade](docs/design/identity.md).
 
 ## Limites académicos e operacionais
 

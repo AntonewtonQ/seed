@@ -1,13 +1,11 @@
 "use client";
 export default function Error({ reset }: { reset: () => void }) {
   return (
-    <div className="ws-panel">
-      <h1 className="text-xl font-bold">
-        Não foi possível carregar esta página
-      </h1>
-      <p className="my-4">Tente novamente dentro de instantes.</p>
+    <div className="ws-empty" role="alert">
+      <h1 className="ws-state-title">Não foi possível mostrar esta página</h1>
+      <p>Os seus dados não foram alterados. Tente novamente.</p>
       <button className="ws-button" onClick={reset}>
-        Voltar a tentar
+        Tentar novamente
       </button>
     </div>
   );

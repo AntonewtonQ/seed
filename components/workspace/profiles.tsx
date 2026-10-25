@@ -8,6 +8,7 @@ import {
   Field,
   Textarea,
   NotAvailable,
+  ReadOnlyNote,
   Badge,
 } from "./ui";
 export function ProfileScreen({
@@ -28,14 +29,16 @@ export function ProfileScreen({
       <>
         <PageHeading
           title="Editar perfil"
-          description="Mantenha a apresentação da sua startup atualizada."
-          back={{ href: "/workspace/profile", label: "Meu perfil" }}
+          description="Nome, sector e descrição da startup."
+          trail={[{ href: "/workspace/profile", label: "Meu perfil" }]}
         />
         <ActionForm
           action="profile"
           to="/workspace/profile"
           cancel="/workspace/profile"
           label="Guardar perfil"
+          next="O perfil atualizado fica visível para os investidores e a aceleradora associados."
+          success="Perfil atualizado."
         >
           <Field name="name" label="Nome da startup" value={s.name} />
           <Field name="sector" label="Sector" value={s.sector} />
@@ -54,12 +57,10 @@ export function ProfileScreen({
         title={own ? "Meu perfil" : s.name}
         description={
           own
-            ? "A informação partilhada nas suas relações de captação."
+            ? "Informação visível nas suas negociações."
             : s.sector
         }
-        back={
-          own ? undefined : { href: "/workspace/startups", label: "Startups" }
-        }
+        trail={own ? [] : [{ href: "/workspace/startups", label: "Startups" }]}
         action={
           own ? (
             <ActionLink href="/workspace/profile/edit">
@@ -67,11 +68,14 @@ export function ProfileScreen({
             </ActionLink>
           ) : (
             <ActionLink href={"/workspace/rounds?startup=" + s.id}>
-              Ver rondas
+              Ver rondas ({data.rounds.filter((r) => r.startup_id === s.id).length})
             </ActionLink>
           )
         }
       />
+      {!own && (
+        <ReadOnlyNote>Só consulta. O perfil é mantido pela startup.</ReadOnlyNote>
+      )}
       <div className="ws-panel">
         <dl className="ws-record">
           <div>
@@ -100,7 +104,7 @@ export function StartupsScreen() {
     <>
       <PageHeading
         title="Startups acompanhadas"
-        description="Abra uma startup para consultar o perfil e as suas rondas."
+        description="Startups vinculadas à sua organização."
       />
       <Collection
         items={data.startups.map((s) => ({
@@ -115,6 +119,8 @@ export function StartupsScreen() {
           ),
         }))}
         empty="Sem startups vinculadas"
+        description="Quando uma startup for vinculada à sua organização, aparece aqui."
+        search="Pesquisar startups"
       />
     </>
   );

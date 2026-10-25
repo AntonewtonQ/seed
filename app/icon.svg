@@ -1,14 +1,7 @@
-<svg viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
-  <rect width="128" height="128" rx="24" fill="#0F3D3E"/>
-  <path d="M0 0h128v128H0z" fill="url(#seed-app-icon-gradient)" opacity=".72"/>
-  <circle cx="64" cy="25" r="10" fill="#F7F2E3"/>
-  <path d="M52 36 32 48v31l20 13" fill="none" stroke="#DCEBE9" stroke-opacity=".82" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M76 36 96 48v31L76 92" fill="none" stroke="#C9A227" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M64 47 45 67h11v31h16V67h11L64 47Z" fill="#FFFFFF"/>
-  <defs>
-    <linearGradient id="seed-app-icon-gradient" x1="20" x2="108" y1="118" y2="10" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#145A5B"/>
-      <stop offset="1" stop-color="#0F3D3E"/>
-    </linearGradient>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-labelledby="seed-symbol-title">
+  <title id="seed-symbol-title">SEED</title>
+  <rect width="32" height="32" rx="8" fill="#0F3D3E"/>
+  <path d="M16 25V15" fill="none" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M16 18.5C16 13.5 12.5 11 8 11c0 4.6 3 7.5 8 7.5Z" fill="#FFFFFF"/>
+  <path d="M16 15.5C16 10.5 19.5 7 24 7c0 5-3 8.5-8 8.5Z" fill="#FFFFFF"/>
 </svg>

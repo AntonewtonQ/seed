@@ -21,18 +21,18 @@ export default async function Layout({
   } catch (e) {
     if (e instanceof AppError && e.status === 401) redirect("/login");
     return (
-      <main className="mx-auto max-w-lg p-10">
-        <h1 className="text-2xl font-bold">
-          Serviço temporariamente indisponível
-        </h1>
-        <p className="my-5">
-          Não foi possível carregar a sua área. Os seus dados permanecem
-          guardados.
-        </p>
-        <Link href="/workspace" className="underline">
-          Voltar a tentar
-        </Link>
-      </main>
+      <div className="ws-app ws-standalone">
+        <main className="ws-empty" role="alert">
+          <h1 className="ws-state-title">Serviço temporariamente indisponível</h1>
+          <p>
+            Não foi possível carregar a sua área. Os seus dados continuam
+            guardados.
+          </p>
+          <Link href="/workspace" className="ws-button">
+            Tentar novamente
+          </Link>
+        </main>
+      </div>
     );
   }
   return (

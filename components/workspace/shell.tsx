@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useRef, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import {
   LayoutDashboard,
   Building2,
@@ -26,6 +26,15 @@ export function WorkspaceShell({ children }: { children: ReactNode }) {
   const { data, run, busy, notice, dismiss } = useWorkspace();
   const path = usePathname();
   const menu = useRef<HTMLDetailsElement>(null);
+  const message = useRef<HTMLDivElement>(null);
+  // Um erro surge no topo enquanto a pessoa está junto do botão de guardar:
+  // traz a mensagem para o ecrã e dá-lhe foco.
+  useEffect(() => {
+    if (notice?.error && notice.path === path && message.current) {
+      message.current.scrollIntoView({ block: "center", behavior: "instant" });
+      message.current.focus({ preventScroll: true });
+    }
+  }, [notice, path]);
   const role = data.actor.kind;
   const nav: { href: string; label: string; icon: LucideIcon }[] = [
     { href: "/workspace", label: "Painel", icon: LayoutDashboard },
@@ -80,7 +89,7 @@ export function WorkspaceShell({ children }: { children: ReactNode }) {
       </a>
       <aside className="ws-sidebar">
         <Link href="/workspace" aria-label="SEED — painel">
-          <SeedLogo compact tone="light" />
+          <SeedLogo compact />
         </Link>
         <p className="ws-role">{roles[role]}</p>
         <nav aria-label={roles[role]}>{links()}</nav>
@@ -116,6 +125,8 @@ export function WorkspaceShell({ children }: { children: ReactNode }) {
         <main id="workspace-content" tabIndex={-1} className="ws-main">
           {notice && notice.path === path && (
             <div
+              ref={message}
+              tabIndex={-1}
               className={"ws-notice" + (notice.error ? " ws-notice-error" : "")}
               role={notice.error ? "alert" : "status"}
             >

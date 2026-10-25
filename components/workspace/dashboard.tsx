@@ -8,7 +8,11 @@ export function Dashboard() {
   const active = data.opportunities.filter(
     (p) => !["closed", "declined"].includes(p.stage),
   );
+  // Negociações sem próximo passo aparecem primeiro: são as que pedem decisão.
+  const pending = active.filter((p) => !p.next_step.trim());
+  const queue = [...pending, ...active.filter((p) => p.next_step.trim())];
   const open = data.rounds.filter((r) => r.status === "open");
+  const shared = data.documents.filter((d) => !d.owned);
   const title =
     role === "startup"
       ? "A sua captação"
@@ -17,10 +21,10 @@ export function Dashboard() {
         : "Startups em acompanhamento";
   const description =
     role === "startup"
-      ? "Acompanhe as rondas abertas e escolha o próximo passo."
+      ? "Retome as negociações em curso e defina o próximo passo."
       : role === "investor"
-        ? "Consulte as oportunidades associadas à sua organização."
-        : "Veja as startups vinculadas e acompanhe a evolução das rondas.";
+        ? "Negociações em que a sua organização participa."
+        : "Startups vinculadas à sua organização e respetivas rondas.";
   return (
     <>
       <PageHeading
@@ -29,67 +33,70 @@ export function Dashboard() {
         action={
           role === "startup" ? (
             <ActionLink href="/workspace/rounds/new">Abrir ronda</ActionLink>
-          ) : (
-            <ActionLink
-              href={
-                role === "investor"
-                  ? "/workspace/opportunities"
-                  : "/workspace/startups"
-              }
-            >
-              {role === "investor" ? "Ver oportunidades" : "Ver startups"}
-            </ActionLink>
-          )
+          ) : undefined
         }
       />
       <dl className="ws-stats">
-        {role === "accelerator" ? (
-          <Stat label="Startups acompanhadas" value={data.startups.length} />
-        ) : role === "investor" ? (
-          <Stat label="Startups associadas" value={data.startups.length} />
-        ) : (
-          <Stat label="Rondas abertas" value={open.length} />
+        {role === "startup" && (
+          <>
+            <Stat label="Rondas abertas" value={open.length} />
+            <Stat label="Negociações em curso" value={active.length} />
+            <Stat
+              label="Sem próximo passo"
+              value={pending.length}
+              detail={pending.length ? "Defina o que fazer a seguir." : undefined}
+            />
+          </>
         )}
-        <Stat label="Negociações em curso" value={active.length} />
-        {role === "accelerator" ? (
-          <Stat label="Rondas abertas" value={open.length} />
-        ) : (
-          <Stat label="Documentos disponíveis" value={data.documents.length} />
+        {role === "investor" && (
+          <>
+            <Stat label="Negociações em curso" value={active.length} />
+            <Stat label="Documentos partilhados consigo" value={shared.length} />
+          </>
+        )}
+        {role === "accelerator" && (
+          <>
+            <Stat label="Startups acompanhadas" value={data.startups.length} />
+            <Stat label="Rondas abertas" value={open.length} />
+            <Stat label="Negociações em curso" value={active.length} />
+          </>
         )}
       </dl>
       {role === "accelerator" ? (
         <>
           <div className="ws-section-header">
             <h2>Startups acompanhadas</h2>
-            <Link href="/workspace/startups" className="ws-text-link">
-              Ver todas
-            </Link>
+            {data.startups.length > 4 && (
+              <Link href="/workspace/startups" className="ws-text-link">
+                Ver todas ({data.startups.length})
+              </Link>
+            )}
           </div>
           {data.startups.length ? (
             <ul className="ws-list">
-              {data.startups.slice(0, 4).map((s) => (
-                <Row
-                  key={s.id}
-                  href={"/workspace/startups/" + s.id}
-                  title={s.name}
-                  description={s.sector}
-                  meta={
-                    <Badge>
-                      {
-                        data.rounds.filter(
-                          (r) => r.startup_id === s.id && r.status === "open",
-                        ).length
-                      }{" "}
-                      rondas abertas
-                    </Badge>
-                  }
-                />
-              ))}
+              {data.startups.slice(0, 4).map((s) => {
+                const count = data.rounds.filter(
+                  (r) => r.startup_id === s.id && r.status === "open",
+                ).length;
+                return (
+                  <Row
+                    key={s.id}
+                    href={"/workspace/startups/" + s.id}
+                    title={s.name}
+                    description={s.sector || "Sector por preencher"}
+                    meta={
+                      <Badge>
+                        {count} {count === 1 ? "ronda aberta" : "rondas abertas"}
+                      </Badge>
+                    }
+                  />
+                );
+              })}
             </ul>
           ) : (
             <Empty
-              title="Ainda não existem startups vinculadas"
-              description="As startups acompanhadas pela sua organização aparecerão aqui."
+              title="Ainda não há startups vinculadas"
+              description="Quando uma startup for vinculada à sua organização, aparece aqui."
             />
           )}
         </>
@@ -99,13 +106,15 @@ export function Dashboard() {
             <h2>
               {role === "startup" ? "Próximos passos" : "Em acompanhamento"}
             </h2>
-            <Link className="ws-text-link" href="/workspace/opportunities">
-              Ver todas
-            </Link>
+            {active.length > 4 && (
+              <Link className="ws-text-link" href="/workspace/opportunities">
+                Ver todas ({active.length})
+              </Link>
+            )}
           </div>
-          {active.length ? (
+          {queue.length ? (
             <ul className="ws-list">
-              {active.slice(0, 4).map((p) => {
+              {queue.slice(0, 4).map((p) => {
                 const r = data.rounds.find((r) => r.id === p.round_id);
                 const startup = data.startups.find(
                   (s) => s.id === r?.startup_id,
@@ -119,7 +128,7 @@ export function Dashboard() {
                         ? (startup?.name ?? p.round_name)
                         : p.investor_name
                     }
-                    description={`${p.round_name} · ${p.next_step || "Próximo passo por definir"}`}
+                    description={`${p.next_step.trim() || "Próximo passo por definir"} · ${p.round_name}`}
                     meta={<Badge>{stages[p.stage]}</Badge>}
                   />
                 );
@@ -129,13 +138,17 @@ export function Dashboard() {
             <Empty
               title={
                 role === "startup"
-                  ? "Comece uma negociação"
-                  : "Sem oportunidades em acompanhamento"
+                  ? open.length
+                    ? "Associe o primeiro investidor"
+                    : "Abra a primeira ronda"
+                  : "Sem negociações em curso"
               }
               description={
                 role === "startup"
-                  ? "Abra uma ronda e associe um potencial investidor."
-                  : "As startups com uma negociação associada à sua organização aparecerão aqui."
+                  ? open.length
+                    ? "Cada investidor associado a uma ronda dá origem a uma negociação."
+                    : "Uma ronda define a meta e a moeda. Depois, associe investidores."
+                  : "Quando uma startup associar a sua organização a uma negociação, ela aparece aqui."
               }
               action={
                 role === "startup" ? (

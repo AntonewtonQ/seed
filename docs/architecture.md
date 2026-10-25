@@ -40,6 +40,12 @@ O painel `/workspace` adapta o conteúdo ao papel: próximos passos da startup, 
 
 Os caminhos abreviados na tabela conservam o prefixo `/workspace`; os modos de uma entidade conservam também o respetivo identificador. Listas gerais usam pesquisa e paginação de oito registos. A navegação móvel e a lateral partilham os mesmos destinos. Formulários apresentam uma ação principal e cancelamento; feedback de gravação aparece no destino. As restrições visuais complementam as verificações de propriedade e associação no servidor, sem as substituir. A alteração da interface não exige migração de dados.
 
+Identidade e comunicação (revisão de 25 de outubro de 2026):
+- Os tokens de cor, espaçamento e tipografia estão em `app/globals.css`; o workspace usa-os através de `--ws-*` em `app/workspace/workspace.css`.
+- Os componentes partilhados (`PageHeading` com trilho de localização, `ActionForm` com nota de resultado e mensagem de sucesso, `ReadOnlyNote`, `Field` com `hint`) estão em `components/workspace/ui.tsx`. `run()` no contexto aceita uma mensagem de sucesso por ação.
+- Há uma única alteração de comportamento no cliente: o formulário "Associar investidor" não lista investidores já associados à ronda escolhida, o que corresponde à restrição `UNIQUE(round_id, investor_id)` já existente.
+- Ver o [guia de identidade](design/identity.md) e a [revisão da interface](verification/ui-review.md).
+
 ## Modelo de dados
 
 ```mermaid
