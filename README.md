@@ -139,3 +139,5 @@ A avaliação da ideia não demonstra usabilidade, adoção, eficácia ou aument
 O [DOCX](docs/report/tcc_antonewton.docx) é a entrega editável principal; o [PDF](docs/report/tcc_antonewton.pdf) é a versão de leitura inspecionada. Preserve edições manuais posteriores. **Não execute `scripts/revise-report.py` para recuperar esta versão:** o script antigo usa o HEAD Git e conteúdo anterior à análise dos dados.
 
 A receita da revisão de 8 de outubro usa `scripts/integrate-research-report.py` sobre a cópia privada preservada e `scripts/render-research-report.py` sobre um candidato privado. Consulte [procedimento, análise e artefactos](docs/research/README.md) e [notas de revisão](docs/report/revision-notes.md). Gráficos de pesquisa em `docs/research/figures`; diagramas técnicos em `docs/report/figures`.
+
+A atualização de 25 de outubro de 2026 alinhou o relatório com a revisão da interface por edição direta do XML do DOCX atual, sem scripts de regeneração. As alterações e a validação estão em [notas de revisão](docs/report/revision-notes.md).

@@ -1,21 +1,23 @@
+# Revisão do relatório — atualização de 25 de outubro de 2026
+
+O DOCX e o PDF foram editados diretamente no XML, preservando a estrutura, os estilos e as edições manuais. Não houve regeneração a partir do Git. As cópias anteriores e os respetivos hashes estão em `.local/report-2026-10-25/`. O documento continua com 72 páginas, 32 tabelas e 7 figuras. Origem: [guia de identidade](../design/identity.md) e [evidências](../verification/ui-review.md).
+
+| Local (página impressa) | Alteração |
+|---|---|
+| 4.1 Visão geral da plataforma (25) | "A identidade visual foi preservada…" foi substituído pela descrição da revisão de 25 de outubro: identidade simplificada, trilho de localização, resultado de cada formulário, aviso de consulta e explicação das etapas; esquema, permissões e API inalterados |
+| 5.8 Procedimentos de teste (44–45) | "Não foram repetidos testes que modificam dados…" foi substituído pelo relato da reexecução dos quatro cenários, das verificações axe nas páginas públicas e dos 53 itens complementares, com a nota de que criaram registos fictícios |
+| Tabela 27 (45), linha "Interface e acessibilidade" | Critério alargado a "estados vazios e de erro"; resultado "Passou no cenário verificado (reexecutado em 25-10-2026)" |
+| 5.13 Limitações (48) | Novo parágrafo: a revisão resulta de decisões de design, só a explicação de etapas e denominadores se relaciona com a pesquisa, e não houve avaliação com participantes |
+| Apêndice B (9 entradas com `capture.spec.ts`) | "execuções anteriores…, não repetidas nesta revisão" passou a "suíte automatizada reexecutada com aprovação em 25-10-2026" |
+| Sumário | 5.10 passou de 45 para 46 e 5.13 de 47 para 48, por deslocação de página. Os outros 69 títulos numerados mantiveram a página (comparação automática entre o PDF anterior e o novo) |
+
+Validação: XSD do DOCX aprovada contra o original (+1 parágrafo); conversão para PDF com LibreOffice; páginas 25, 45 e 48 inspecionadas visualmente.
+
+A secção seguinte (8 de outubro) mantém-se como registo; onde diverge, prevalece esta atualização. Continuam pendentes: avaliação de uso, revisão académica da codificação assistida, documentação do recrutamento, manual institucional e dados de aprovação.
+
+---
+
 # Revisão académica — atualização de 8 de outubro de 2026
-
-## Pendente para o relatório — revisão da interface de 25 de outubro de 2026
-
-O DOCX e o PDF **não foram alterados**. A aplicação passou por uma revisão de identidade e comunicação ([guia](../design/identity.md), [evidências](../verification/ui-review.md)). Passagens do PDF atual (72 páginas) que deixam de descrever o estado da aplicação:
-
-| Local no PDF | Texto atual | Proposta |
-|---|---|---|
-| 4.1 Visão geral da plataforma (página impressa 25; p. 26 do PDF) | "A identidade visual foi preservada. Nesta fase documental, a aplicação e a base de dados não foram alteradas nem se repetiram testes que criam registos." | "Em 25 de outubro de 2026, a identidade visual foi simplificada (superfícies neutras, um acento, tipografia única, novo símbolo) e a comunicação das telas foi revista: trilho de localização, indicação do resultado de cada formulário, aviso de consulta para investidores e aceleradoras e explicação das etapas. Não houve alteração do esquema, das permissões ou da API. Os testes automatizados foram repetidos e criaram registos fictícios na base de demonstração." |
-| 5.8 Procedimentos de teste (página impressa 44; p. 45 do PDF) | "Não foram repetidos testes que modificam dados nesta revisão documental." | Acrescentar: "Em 25 de outubro de 2026, os quatro cenários foram repetidos com aprovação, em conjunto com verificações axe nas páginas públicas e numa verificação complementar da área autenticada (53 itens, desktop e telemóvel): estados vazios, erro devolvido pelo servidor, teclado e indisponibilidade da base." |
-| Tabela de resultados técnicos (página impressa 45; p. 46 do PDF), linha "Interface e acessibilidade" | "Passou no cenário verificado" | Manter e referir a data de 25 de outubro de 2026 e `docs/verification/ui-review.md` |
-| Capítulo 6 / limitações | — | Registar que a nova comunicação **não** foi avaliada com participantes; a prioridade P0 de `docs/research/recommendations.md` continua por cumprir |
-
-Cuidados ao integrar:
-- Não descrever a revisão visual como resultado da pesquisa. Apenas a explicação de etapas e de denominadores se relaciona com a recomendação P1 (ver "Relação com a pesquisa" no guia).
-- Se forem incluídas capturas no relatório, usar as de `docs/verification/` desta data e indicar que os dados são fictícios.
-- As figuras atuais do relatório (arquitetura, entidades, sequência e acessos) são diagramas e não precisam de alteração.
-
 
 O DOCX principal e a versão PDF foram revistos a partir dos ficheiros recuperados. A indisponibilidade de respostas registada em 7 de outubro foi resolvida. A secção histórica abaixo descreve a revisão anterior; as suas limitações sobre dados indisponíveis e comandos de regeneração **não representam o estado atual**.
 
